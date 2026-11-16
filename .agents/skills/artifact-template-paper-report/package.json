@@ -1,0 +1,13 @@
+{
+  "name": "leon-paper-report-skill",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "image-size": "1.2.1",
+    "pptxgenjs": "4.0.1"
+  }
+}
