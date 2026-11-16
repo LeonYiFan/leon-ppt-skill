@@ -1,5 +1,5 @@
 ---
-name: artifact-template-paper-report
+name: leon-ppt-skill
 description: 将用户提供的论文 PDF、DOI 或链接制作成中文、可编辑的蓝白学术文献汇报 PPTX，包含研究设计、论文原图解读、总结讨论、图源和讲稿备注。适用于组会、Journal Club 和论文精读汇报。
 ---
 
