@@ -9,12 +9,18 @@ if(Test-Path -LiteralPath $target){
   if(@(Get-ChildItem -LiteralPath $target -Force).Count -gt 0){throw "Use a new empty render directory: $target"}
 }
 New-Item -ItemType Directory -Force -Path $target | Out-Null
+# A separate filename keeps COM from returning an already-open presentation.
+$copy=Join-Path ([IO.Path]::GetTempPath()) ('leon-ppt-render-' + [guid]::NewGuid().ToString('N') + '.pptx')
 $app=$null
+$ownsDeck=$false
 $deck=$null
 $issues=[System.Collections.Generic.List[object]]::new()
 try {
+  [IO.File]::Copy($source,$copy)
   $app=New-Object -ComObject PowerPoint.Application
-  $deck=$app.Presentations.Open($source,$true,$false,$false)
+  $deck=$app.Presentations.Open($copy,-1,0,0)
+  $ownsDeck=$deck.FullName -eq $copy
+  if(!$ownsDeck){throw 'PowerPoint returned a presentation other than the render copy'}
   $count=$deck.Slides.Count
   $deck.Export($target,'PNG',1620,912)
   foreach($slide in $deck.Slides){foreach($shape in $slide.Shapes){
@@ -34,6 +40,11 @@ try {
   [pscustomobject]@{Source=$source;SlideCount=$count;PngCount=@(Get-ChildItem -LiteralPath $target -Filter '*.PNG').Count;TextFitIssues=$issues.Count} | ConvertTo-Json | Set-Content -LiteralPath (Join-Path $target 'render-report.json') -Encoding utf8
   Write-Output "Rendered $count slides. Text fit issues: $($issues.Count). Inspect every PNG before delivery."
 } finally {
-  if($null -ne $deck){$deck.Close()}
-  if($null -ne $app){$app.Quit()}
+  try {
+    if($ownsDeck){$deck.Close()}
+  } finally {
+    if($null -ne $deck){[void][Runtime.InteropServices.Marshal]::ReleaseComObject($deck)}
+    if($null -ne $app){[void][Runtime.InteropServices.Marshal]::ReleaseComObject($app)}
+    [IO.File]::Delete($copy)
+  }
 }

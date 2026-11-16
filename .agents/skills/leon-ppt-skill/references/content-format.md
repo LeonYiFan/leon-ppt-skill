@@ -7,11 +7,9 @@
   "meta": {
     "title": "中文题名",
     "englishTitle": "English title",
-    "authors": "作者",
     "citation": "期刊 · 年份 · 卷页",
     "doi": "已核实的 DOI",
-    "topic": "文献汇报",
-    "source": "原文或补充材料来源"
+    "topic": "文献汇报"
   },
   "slides": [
     {"type": "cover"},
@@ -32,7 +30,7 @@
 }
 ```
 
-`title`、`englishTitle`、`authors`、`citation` 必填，至少一张幻灯片。每页可加 `notes`、`ref` 和 `caption`。正文页用 `part`、`title` 和可选 `takeaway`。
+`title`、`englishTitle` 必填，至少一张幻灯片。可选引用信息用 `citation` 和 `doi`。输出省略旧输入中的 `authors`、`affiliation` 和 `source`，以免附带姓名、单位或本机路径。图源页码和图号用每页的 `ref`。每页可加 `notes`、`ref` 和 `caption`。正文页用 `part`、`title` 和可选 `takeaway`。
 
 | 页型 | 字段与用途 |
 | --- | --- |
@@ -42,7 +40,7 @@
 | `divider` | `number`、`title`、可选 `subtitle`。 |
 | `text` | `items` 为 1–3 组小标题和正文。 |
 | `table` | `rows` 是同宽的 2–6 行、2–6 列二维数组。首行为表头。可选 `columnWidths` 提供合计 970 的相对宽度。 |
-| `result` | `items` 为 1–3 组小标题和正文。`panels` 可提供 0–2 张带可选 `label` 的图，空数组生成占位形状。 |
+| `result` | `items` 为 1–3 组小标题和正文。`panels` 可提供 0–3 张带可选 `label` 的图。按实际数量摆放，空数组生成空图位。 |
 | `flow` | `nodes` 为 4 个顺序节点，生成可编辑框和箭头。 |
 | `thanks` | 可用 `title` 和 `subtitle` 调整结束页。 |
 

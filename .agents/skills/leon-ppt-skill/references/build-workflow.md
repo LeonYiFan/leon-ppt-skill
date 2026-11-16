@@ -18,4 +18,4 @@ node "<skill目录>/scripts/build_report.cjs" --input "./work/report.json" --out
 & "<skill目录>/scripts/render_powerpoint.ps1" -PptxPath "./output/report.pptx" -OutputDir "./work/render"
 ```
 
-文字检查仅提供溢出提示。还需检查横向截断、图表与文本的遮挡、图内字的可读性，以及来源和结论是否与论文相符。检查日志和原始论文放在各自工作区。
+PowerPoint 渲染脚本只读打开独立的临时副本，导出后关闭该副本。文字检查提供溢出提示。逐页核对横向截断、遮挡、图中文字、来源与结论，并检查原图内的徽标及身份信息。检查日志和原始论文放在各自工作区。

@@ -1,6 +1,6 @@
 # Leon PPT Skill · 文献汇报
 
-把用户提供的论文 PDF、DOI 或链接整理成中文蓝白学术汇报。支持封面、目录、章节页、原图解读、原生表格、流程和讲稿备注。
+把用户提供的论文 PDF、DOI 或链接整理成中文蓝白学术汇报。支持封面、目录、章节页、原图解读、原生表格、流程和讲稿备注。生成稿可保留学术出处，省去徽标、姓名、单位和联系方式。
 
 [下载可编辑空白模板](https://raw.githubusercontent.com/LeonYiFan/leon-ppt-skill/main/.agents/skills/leon-ppt-skill/assets/paper-report-template.pptx) · [查看模板预览](.agents/skills/leon-ppt-skill/assets/preview.png)
 

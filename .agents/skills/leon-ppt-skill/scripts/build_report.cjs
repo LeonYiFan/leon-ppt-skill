@@ -20,7 +20,6 @@ const blankReport = {
   meta: {
     title: "[论文中文题名]",
     englishTitle: "[论文英文题名]",
-    authors: "[作者]",
     citation: "[期刊 · 年份 · 卷页]",
     doi: "[DOI]",
     topic: "文献汇报"
@@ -52,6 +51,17 @@ const blankReport = {
   ]
 };
 
+const IDENTITY_LABEL = /(?:^|[\s，。；;（(])(?:汇报人|演讲者|第一作者|通讯作者|作者姓名|姓名|作者|所属单位|作者单位|汇报单位|工作单位|机构名称|联系方式|电子邮箱|手机号码|presented by|speaker|corresponding author|affiliation|full name|contact email|e-?mail)\s*[:：]\s*\S/iu;
+const EMAIL = /\b[\w.+-]+@[\w.-]+\.[a-z]{2,}\b/iu;
+
+function anonymousText(value, location) {
+  const content = String(value ?? "");
+  if (IDENTITY_LABEL.test(content) || EMAIL.test(content)) {
+    throw new Error(location + ": remove personal names, affiliations, and contact details.");
+  }
+  return content;
+}
+
 function renderReport(pptx, report, inputDirectory, isTemplate) {
   const { meta, slides } = report;
   const shape = pptx.ShapeType;
@@ -70,7 +80,7 @@ function renderReport(pptx, report, inputDirectory, isTemplate) {
   }
 
   function text(slide, value, x, y, w, h, options = {}) {
-    slide.addText(String(value ?? ""), {
+    slide.addText(anonymousText(value, "Slide text"), {
       x, y, w, h, fontFace: FONT, fontSize: 18, color: C.text, margin: 0,
       valign: "mid", lang: "zh-CN", breakLine: false, ...options
     });
@@ -84,7 +94,7 @@ function renderReport(pptx, report, inputDirectory, isTemplate) {
     const fittedHeight = height * scale;
     slide.addImage({
       path: figure, x: x + (w - fittedWidth) / 2, y: y + (h - fittedHeight) / 2,
-      w: fittedWidth, h: fittedHeight, altText: label || "论文图"
+      w: fittedWidth, h: fittedHeight, altText: anonymousText(label || "论文图", "Figure label")
     });
   }
 
@@ -132,9 +142,12 @@ function renderReport(pptx, report, inputDirectory, isTemplate) {
     text(slide, meta.title, M, 1.54, 9.48, 2.36, { fontSize: 38, bold: true, color: C.navy });
     text(slide, meta.englishTitle, M, 4.01, 9.33, 0.85, { fontSize: 17, color: C.subdued });
     rect(slide, 0, 5.43, W, 2.07, C.blue);
-    text(slide, meta.citation, M, 5.76, slideWidth, 0.55, { fontSize: 20, color: C.white, bold: true });
-    text(slide, meta.doi ? meta.authors + "   ·   " + meta.doi : meta.authors, M, 6.48,
-      slideWidth, 0.43, { fontSize: 13, color: C.white });
+    if (meta.citation?.trim()) {
+      text(slide, meta.citation, M, 5.76, slideWidth, 0.55, { fontSize: 20, color: C.white, bold: true });
+    }
+    if (meta.doi?.trim()) {
+      text(slide, meta.doi, M, 6.48, slideWidth, 0.43, { fontSize: 13, color: C.white });
+    }
   }
 
   function info(slide, entry, index) {
@@ -144,8 +157,9 @@ function renderReport(pptx, report, inputDirectory, isTemplate) {
       infoWidth = 7.65;
       picture(slide, entry.header, 8.68, 2.07, R - 8.68, 3.76, "文献基本信息");
     }
-    const details = [["题名", meta.englishTitle], ["作者", meta.authors], ["发表信息", meta.citation]];
-    if (meta.doi) details.push(["DOI", meta.doi]);
+    const details = [["题名", meta.englishTitle]];
+    if (meta.citation?.trim()) details.push(["发表信息", meta.citation]);
+    if (meta.doi?.trim()) details.push(["DOI", meta.doi]);
     rows(slide, details, M, 2.04, infoWidth, 0.96, 1.52, 17);
     takeaway(slide, entry.takeaway);
   }
@@ -172,10 +186,10 @@ function renderReport(pptx, report, inputDirectory, isTemplate) {
       { fontSize: 11, color: C.blue, bold: true, align: "right" });
   }
 
-  function table(slide, entry) {
+  function table(slide, entry, slideNumber) {
     const fontSize = entry.tableFontSize ? entry.tableFontSize * 0.9 : 16;
-    const values = entry.rows.map((row, index) => row.map(cell => ({
-      text: String(cell ?? ""),
+    const values = entry.rows.map((row, index) => row.map((cell, col) => ({
+      text: anonymousText(cell, "Slide " + slideNumber + " table R" + (index + 1) + "C" + (col + 1)),
       options: {
         fill: { color: index === 0 ? C.blue : index % 2 ? C.white : C.ice },
         color: index === 0 ? C.white : C.navy, bold: index === 0
@@ -241,7 +255,7 @@ function renderReport(pptx, report, inputDirectory, isTemplate) {
           entry.bodySize ? entry.bodySize * 0.9 : 19);
         takeaway(slide, entry.takeaway);
         break;
-      case "table": header(slide, entry, index); table(slide, entry); break;
+      case "table": header(slide, entry, index); table(slide, entry, index); break;
       case "result": header(slide, entry, index); result(slide, entry); break;
       case "flow": header(slide, entry, index); flow(slide, entry); break;
       case "thanks":
@@ -257,19 +271,26 @@ function renderReport(pptx, report, inputDirectory, isTemplate) {
 
     const notes = [
       entry.notes, entry.caption, entry.ref && "来源定位：" + entry.ref,
-      meta.source && "论文来源：" + meta.source,
-      !isTemplate && meta.doi && "https://doi.org/" + meta.doi
+      !isTemplate && meta.doi?.trim() && "https://doi.org/" + meta.doi.trim()
     ].filter(Boolean);
-    slide.addNotes(notes.length ? notes : [isTemplate ? "[填写本页讲稿和出处]" : meta.citation]);
+    if (!notes.length) {
+      notes.push(isTemplate ? "[填写本页讲稿和出处]" : meta.citation || "");
+    }
+    slide.addNotes(notes.map(note => anonymousText(note, "Slide " + index + " notes")));
   });
 }
 
 function validateReport(report) {
   const { meta, slides } = report;
-  const required = ["title", "englishTitle", "authors", "citation"];
+  const required = ["title", "englishTitle"];
   if (!meta || required.some(field => typeof meta[field] !== "string" || !meta[field].trim()) ||
       !Array.isArray(slides) || !slides.length) {
-    throw new Error("report.json needs meta.title, englishTitle, authors, citation and at least one slide.");
+    throw new Error("report.json needs meta.title, englishTitle and at least one slide.");
+  }
+  for (const field of ["title", "englishTitle", "topic", "citation", "doi"]) {
+    const value = meta[field];
+    if (value != null && typeof value !== "string") throw new Error("meta." + field + " must be text.");
+    anonymousText(value, "meta." + field);
   }
   const types = ["cover", "info", "agenda", "divider", "text", "table", "result", "flow", "thanks"];
   function range(array, min, max) {
@@ -283,9 +304,9 @@ function validateReport(report) {
     if (!types.includes(entry?.type)) throw new Error(message + "unknown slide type.");
     if (entry.type === "text" && !pairs(entry.items, 1, 3)) throw new Error(message + "expected 1–3 item pairs.");
     if (entry.type === "result" && (!pairs(entry.items, 1, 3) ||
-        !range(entry.panels ?? [], 0, 2) ||
+        !range(entry.panels ?? [], 0, 3) ||
         (entry.panels ?? []).some(panel => typeof panel?.path !== "string" || !panel.path.trim()))) {
-      throw new Error(message + "expected 1–3 item pairs and up to two figure paths.");
+      throw new Error(message + "expected 1–3 item pairs and up to three figure paths.");
     }
     if (entry.type === "agenda" && entry.sections && !pairs(entry.sections, 1, 4)) {
       throw new Error(message + "expected 1–4 section pairs.");
@@ -321,7 +342,8 @@ async function main() {
   pptx.layout = "LAYOUT_WIDE";
   pptx.title = report.meta.title;
   pptx.subject = "Academic paper report";
-  pptx.author = "Paper Report";
+  pptx.author = "";
+  pptx.company = "";
   pptx.lang = "zh-CN";
   pptx.theme = { headFontFace: FONT, bodyFontFace: FONT, lang: "zh-CN" };
   renderReport(pptx, report, values.input ? path.dirname(path.resolve(values.input)) : process.cwd(), values.template);
