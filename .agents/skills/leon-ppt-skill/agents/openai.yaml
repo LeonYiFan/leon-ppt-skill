@@ -1,0 +1,7 @@
+interface:
+  display_name: "leon-ppt-skill"
+  short_description: "用蓝白模板做中文、可编辑的学术汇报 PPTX；保留蓝白版式，生成稿去除徽标、个人姓名和单位信息"
+  icon_large: "./assets/preview.png"
+  default_prompt: "$leon-ppt-skill 把“论文.pdf”做成中文、可编辑的学术汇报：沿用蓝白模板的封面/目录/章节页/要点块/卡片/灰底总结条，结论式标题 + 红字关键数 + 底部总结条，核对原图并裁掉徽标、姓名和单位。正文、备注与文档属性也做匿名处理。"
+policy:
+  allow_implicit_invocation: true

@@ -1,33 +1,30 @@
 # Leon PPT Skill · 文献汇报
 
-把用户提供的论文 PDF、DOI 或链接整理成中文蓝白学术汇报。支持封面、目录、章节页、原图解读、原生表格、流程和讲稿备注。生成稿可保留学术出处，省去徽标、姓名、单位和联系方式。
+用可编辑的蓝白 PowerPoint 模板整理中文学术汇报。分点、图卡和灰底总结条按内容排布，正文图号、页码和出处记录在演讲者备注。生成稿省去徽标、个人姓名、单位和联系方式。
 
-[下载可编辑空白模板](https://raw.githubusercontent.com/LeonYiFan/leon-ppt-skill/main/.agents/skills/leon-ppt-skill/assets/paper-report-template.pptx) · [查看模板预览](.agents/skills/leon-ppt-skill/assets/preview.png)
+[下载可编辑模板](.agents/skills/leon-ppt-skill/assets/template-deck.pptx) · [查看版式规范](.agents/skills/leon-ppt-skill/references/report-guide.md)
 
 ## 在 Codex 使用
 
-```bash
-git clone https://github.com/LeonYiFan/leon-ppt-skill.git
-cd leon-ppt-skill
-```
-
-把该目录作为 Codex 项目打开，然后输入：
+克隆仓库后将其作为 Codex 项目打开。跨项目使用时，将 `.agents/skills/leon-ppt-skill/` 完整复制到自己的 Codex 技能目录。
 
 > 用 $leon-ppt-skill 为我上传的论文制作 15 分钟文献汇报。重点讲研究设计、主图和局限。
 
-项目内的 skill 位于 `.agents/skills/leon-ppt-skill/`。如需跨项目使用，可将这个完整文件夹复制到 `~/.agents/skills/`，Windows 对应 `%USERPROFILE%\.agents\skills\`。
+## 运行虚构示例
 
-## 用虚构案例试跑生成器
+需要 Python 3.11 或更新版本。进入技能目录后，在 Windows PowerShell 中运行：
 
-需要 Node.js 20 或更新版本和 npm。从上面克隆的仓库根目录运行：
-
-```bash
+```powershell
 cd .agents/skills/leon-ppt-skill
-npm ci --ignore-scripts
-node scripts/build_report.cjs --input ../../../examples/mock-report.json --output ../../../output/mock-report.pptx
+python -m pip install -r requirements.txt
+New-Item -ItemType Directory -Force ../../../output | Out-Null
+python scripts/build_report.py --plan assets/example-plan.json --output ../../../output/example.pptx --manifest ../../../output/example.audit.json
+python scripts/check_deck.py ../../../output/example.pptx --manifest ../../../output/example.audit.json
 ```
 
-生成器采用 PptxGenJS。也可直接打开空白模板，在 PowerPoint 编辑文字、表格、箭头和形状。示例 JSON 使用虚构内容，可按 [数据格式](.agents/skills/leon-ppt-skill/references/content-format.md) 替换为自己的材料。
+按 [计划格式](.agents/skills/leon-ppt-skill/references/page-plan.md) 填写自己的内容。需要原生选版时，用 `--native-library` 指向已在本机单独配置的素材库。仓库里的匿名空白模板、常规页型及可编辑证据卡可独立使用。原始论文、答辩原稿、私有素材库和本次汇报成品保存在本机。
+
+原有 Node.js 接口仍使用 `scripts/build_report.cjs` 和 [旧版示例](examples/mock-report.json)。
 
 ## 许可
 

@@ -1,3 +1,17 @@
 node_modules/
 output/
 .paper-report-build/
+
+__pycache__/
+*.pyc
+.venv/
+.env
+.env.*
+*.audit.json
+*.pdf
+*.ppt
+*.pptx
+!/.agents/skills/leon-ppt-skill/assets/paper-report-template.pptx
+!/.agents/skills/leon-ppt-skill/assets/template-deck.pptx
+**/native-library/
+**/assets/legacy/

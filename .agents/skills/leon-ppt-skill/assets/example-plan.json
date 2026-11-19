@@ -1,0 +1,185 @@
+{
+  "meta": {
+    "title_cn": "背景噪声与即时回忆",
+    "title_en": "Background Noise and Immediate Recall",
+    "footer": "虚构练习材料 · 仅供版式演示"
+  },
+  "sections": [
+    "研究问题",
+    "设计与方法",
+    "观察结果",
+    "结论与限制"
+  ],
+  "audit": {
+    "identity_terms": [],
+    "figure_sources": {
+      "example-figures/training.png": {
+        "source": "虚构练习图 · Model Training"
+      },
+      "example-figures/validation.png": {
+        "source": "虚构练习图 · Holdout Check"
+      },
+      "example-figures/quiet.png": {
+        "source": "虚构练习图 · Quiet"
+      },
+      "example-figures/steady.png": {
+        "source": "虚构练习图 · Steady Noise"
+      },
+      "example-figures/variable.png": {
+        "source": "虚构练习图 · Variable Noise"
+      }
+    }
+  },
+  "slides": [
+    {
+      "type": "cover",
+      "notes": "【讲】本例用虚构数据演示可编辑页面。"
+    },
+    {
+      "type": "agenda"
+    },
+    {
+      "type": "divider",
+      "title": "研究问题"
+    },
+    {
+      "type": "bullets",
+      "title": "三类背景声对应同一回忆任务",
+      "bullets": [
+        "设置**三种背景声**条件，统一回忆材料。",
+        "每轮记录**正确回忆项数**。"
+      ],
+      "summary": "统一读数口径，才便于**比较条件**。",
+      "source": "虚构练习数据，仅供版式演示",
+      "notes": "【讲】三个条件沿用同一份计分规则。"
+    },
+    {
+      "type": "table",
+      "title": "四个环节按统一时间窗执行",
+      "bullets": [
+        "每次运行使用**固定流程**。"
+      ],
+      "table": {
+        "rows": [
+          [
+            "环节",
+            "时长",
+            "现场记录"
+          ],
+          [
+            "材料呈现",
+            "30 秒",
+            "完成轮次"
+          ],
+          [
+            "间隔",
+            "15 秒",
+            "背景声条件"
+          ],
+          [
+            "作答",
+            "45 秒",
+            "回忆项数"
+          ],
+          [
+            "复核",
+            "30 秒",
+            "匹配得分"
+          ]
+        ],
+        "widths": [
+          10,
+          8,
+          12.6
+        ],
+        "size": 16
+      },
+      "summary": "每组都使用**相同的计时和规则**。",
+      "source": "虚构练习数据，仅供版式演示",
+      "notes": "【讲】表中时长为填写示例。"
+    },
+    {
+      "type": "divider",
+      "title": "设计与方法"
+    },
+    {
+      "type": "cards2",
+      "title": "留出数据用于独立核查",
+      "bullets": [
+        "训练与留出数据分开记录。"
+      ],
+      "cards": [
+        {
+          "title": "训练与调参",
+          "foot": "在建模阶段使用",
+          "figure": "example-figures/training.png"
+        },
+        {
+          "title": "留出核查",
+          "foot": "模型固定后核对",
+          "figure": "example-figures/validation.png"
+        }
+      ],
+      "summary": "保留**独立检查**，便于报告误差。",
+      "source": "虚构练习数据，仅供版式演示",
+      "notes": "【讲】两张插图都是虚构示意，文本和卡片可编辑。"
+    },
+    {
+      "type": "divider",
+      "title": "观察结果"
+    },
+    {
+      "type": "triple",
+      "title": "回忆项数按三类背景声呈现",
+      "bullets": [
+        "三张图均使用**相同计分口径**。"
+      ],
+      "strip": "横条表示示意组的正确回忆项数",
+      "cards": [
+        {
+          "title": "安静条件",
+          "value": "8 项",
+          "note": "两组相同",
+          "caption": "安静条件示意",
+          "figure": "example-figures/quiet.png"
+        },
+        {
+          "title": "稳定噪声",
+          "value": "7 项",
+          "note": "两组相同",
+          "caption": "稳定噪声示意",
+          "figure": "example-figures/steady.png"
+        },
+        {
+          "title": "变化噪声",
+          "value": "5–6 项",
+          "note": "两组不同",
+          "caption": "变化噪声示意",
+          "figure": "example-figures/variable.png"
+        }
+      ],
+      "summary": "并列图卡便于**核对同口径结果**。",
+      "source": "虚构练习数据，仅供版式演示",
+      "notes": "【讲】三张图使用示意值，不作统计推断。"
+    },
+    {
+      "type": "divider",
+      "title": "结论与限制"
+    },
+    {
+      "type": "bullets",
+      "title": "示意读数只用于说明比较方式",
+      "bullets": [
+        "各条件统一呈现**正确回忆项数**。",
+        "图源与读数口径记录在备注中。"
+      ],
+      "summary": "正式汇报时以**原始证据**替换示意图。",
+      "source": "虚构练习数据，仅供版式演示",
+      "notes": "【讲】重申示例为虚构，正式项目应使用原图和真实引文。"
+    },
+    {
+      "type": "thanks",
+      "notes": "【讲】感谢聆听。"
+    }
+  ]
+}

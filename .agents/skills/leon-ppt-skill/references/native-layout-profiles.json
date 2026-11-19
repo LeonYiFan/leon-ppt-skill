@@ -1,0 +1,129 @@
+{
+  "profiles": [
+    {
+      "id": "gut-single-panel",
+      "slide_sha256": "c98be4b9a0683545ee4c203c6c0832628803ba4440efc22d555d9436ee489644",
+      "source": "gut",
+      "page": 40,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "36",
+      "body": "31",
+      "max_body_lines": 2,
+      "artwork": ["35"],
+      "omit": ["27", "28", "29", "30"],
+      "source_box": [1.24, 16.63, 30.9, 0.36],
+      "figures": [
+        {"id": "26", "label": "25", "container": "23", "header": "24"}
+      ]
+    },
+    {
+      "id": "gut-wide-and-square",
+      "slide_sha256": "968f45545645a2594a9925e4691433392c17086f2be25e8d2c96cd97fc0ec5b6",
+      "source": "gut",
+      "page": 21,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "28",
+      "body": "26",
+      "max_body_lines": 2,
+      "artwork": ["20"],
+      "omit": ["6", "7", "18"],
+      "source_box": [1.24, 16.18, 30.9, 0.36],
+      "figures": [
+        {"id": "21", "label": "12", "container": "10", "header": "11"},
+        {"id": "25", "label": "24", "container": "22", "header": "23"}
+      ]
+    },
+    {
+      "id": "gut-two-wide-panels",
+      "slide_sha256": "67a179d59bd0327dc586d83b7153416898e5ed409053d7d83626e10f0399607d",
+      "source": "gut",
+      "page": 26,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "29",
+      "body": "4",
+      "max_body_lines": 2,
+      "artwork": ["28"],
+      "omit": ["18", "19", "20", "21", "22", "23"],
+      "source_box": [1.24, 16.18, 30.9, 0.36],
+      "figures": [
+        {"id": "13", "label": "12", "container": "10", "header": "11"},
+        {"id": "17", "label": "16", "container": "14", "header": "15"}
+      ]
+    },
+    {
+      "id": "gut-emphasize-left-panel",
+      "slide_sha256": "794a1ca4ae1cd525ad93af116cc346087facebd113b15ba59f2a6b3f06b3b546",
+      "source": "gut",
+      "page": 29,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "23",
+      "body": "18",
+      "max_body_lines": 2,
+      "artwork": ["22"],
+      "omit": [],
+      "source_box": [1.1, 16.79, 31.35, 0.37],
+      "figures": [
+        {"id": "13", "label": "12", "container": "10", "header": "11"},
+        {"id": "17", "label": "16", "container": "14", "header": "15"}
+      ]
+    },
+    {
+      "id": "gut-balanced-panels",
+      "slide_sha256": "8a5f0ca75f229ed6947f79e99227579ae84f6b41449119571b40d57e424914f3",
+      "source": "gut",
+      "page": 52,
+      "intent": "figure_evidence",
+      "title": "5",
+      "summary": "52",
+      "body": "10",
+      "max_body_lines": 2,
+      "artwork": ["51"],
+      "omit": [],
+      "source_box": [1.1, 16.90, 31.35, 0.35],
+      "shift_cm": {"50": [0, 0.12]},
+      "figures": [
+        {"id": "6", "label": "19", "container": "15", "header": "16"},
+        {"id": "8", "label": "20", "container": "17", "header": "18"}
+      ]
+    },
+    {
+      "id": "guide-three-card-questions",
+      "slide_sha256": "023e6f7098ccf4ca069c92953ac2b7e2e4623a95160b24acf7b47fa1d5e9687b",
+      "source": "guide",
+      "page": 7,
+      "intent": "parallel_cards",
+      "title": "2",
+      "summary": "7",
+      "body": "5",
+      "max_body_lines": 1,
+      "artwork": ["6"],
+      "omit": ["3", "4", "63", "70", "8", "12", "11"],
+      "source_box": [1.1, 16.12, 30.5, 0.36],
+      "cards": [
+        {"container": "20", "title": "40", "body_container": "34", "body": "62", "badge": "36"},
+        {"container": "43", "title": "48", "body_container": "45", "body": "64", "badge": "46"},
+        {"container": "55", "title": "60", "body_container": "57", "body": "69", "badge": "58"}
+      ]
+    },
+    {
+      "id": "guide-paired-risk-response",
+      "slide_sha256": "45d95a82ded4efb6c72d065de6484b2e45e73621cefcc1a052331818647f6ef5",
+      "source": "guide",
+      "page": 30,
+      "intent": "risk_response",
+      "title": "2",
+      "summary": "76",
+      "artwork": ["75"],
+      "omit": ["15", "17"],
+      "source_box": [1.1, 18.08, 30.8, 0.36],
+      "columns": [
+        {"container": "189", "header": "187", "label": "•  预期风险", "rows": [["193", "195", "3", "194"],["10", "198", "4", "197"],["11", "200", "5", "199"]]},
+        {"container": "191", "header": "192", "label": "•  应对措施", "rows": [["12", "202", "7", "201"],["13", "204", "8", "203"],["14", "206", "9", "205"]]}
+      ]
+    }
+  ]
+}
