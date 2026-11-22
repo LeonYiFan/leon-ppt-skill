@@ -268,6 +268,2048 @@
         "160": {"fill": "white", "line": "outline"},
         "161": {"fill": "white", "line": "outline"}
       }
+    },
+    {
+      "id": "kw16-9-two-lane-schedule",
+      "source": "kw16-9",
+      "page": 44,
+      "slide_sha256": "3e4b24bb66ddd58c0f623c6e1897db44f4533caf132091f49937048b38cf252c",
+      "intent": "paired_schedule",
+      "structure": "两个对象沿同一组四个实际阶段对齐。横向等距表示顺序，阶段名可写入相对时间点。",
+      "item_count": 2,
+      "equivalent_source": {
+        "source": "kw16",
+        "page": 424
+      },
+      "include": [
+        "203",
+        "251",
+        "1680",
+        "191",
+        "194",
+        "196",
+        "242",
+        "253",
+        "249",
+        "255",
+        "257",
+        "259",
+        "1709",
+        "1712",
+        "1715",
+        "1718",
+        "1673",
+        "1674",
+        "1675"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "251": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title"
+        },
+        "1680": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.steps.0"
+        },
+        "191": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.steps.1"
+        },
+        "194": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.steps.2"
+        },
+        "196": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.steps.3"
+        },
+        "253": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title"
+        },
+        "249": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.steps.0"
+        },
+        "255": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.steps.1"
+        },
+        "257": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.steps.2"
+        },
+        "259": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.steps.3"
+        },
+        "1709": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "stages.0"
+        },
+        "1712": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "stages.1"
+        },
+        "1715": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "stages.2"
+        },
+        "1718": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "stages.3"
+        }
+      },
+      "palette": {
+        "203": {
+          "box_cm": [
+            1.24,
+            8.370000000000001,
+            31.35,
+            0.27
+          ],
+          "fill": "mid",
+          "line": "none"
+        },
+        "251": {
+          "box_cm": [
+            1.24,
+            8.72,
+            6.6,
+            2.35
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "1680": {
+          "box_cm": [
+            8.19,
+            8.72,
+            5.95,
+            2.35
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "191": {
+          "box_cm": [
+            14.34,
+            8.72,
+            5.95,
+            2.35
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "194": {
+          "box_cm": [
+            20.490000000000002,
+            8.72,
+            5.95,
+            2.35
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "196": {
+          "box_cm": [
+            26.64,
+            8.72,
+            5.95,
+            2.35
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "242": {
+          "box_cm": [
+            1.24,
+            12.190000000000001,
+            31.35,
+            0.27
+          ],
+          "fill": "mid",
+          "line": "none"
+        },
+        "253": {
+          "box_cm": [
+            1.24,
+            12.540000000000001,
+            6.6,
+            2.35
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "249": {
+          "box_cm": [
+            8.19,
+            12.540000000000001,
+            5.95,
+            2.35
+          ],
+          "fill": "white",
+          "line": "outline"
+        },
+        "255": {
+          "box_cm": [
+            14.34,
+            12.540000000000001,
+            5.95,
+            2.35
+          ],
+          "fill": "white",
+          "line": "outline"
+        },
+        "257": {
+          "box_cm": [
+            20.490000000000002,
+            12.540000000000001,
+            5.95,
+            2.35
+          ],
+          "fill": "white",
+          "line": "outline"
+        },
+        "259": {
+          "box_cm": [
+            26.64,
+            12.540000000000001,
+            5.95,
+            2.35
+          ],
+          "fill": "white",
+          "line": "outline"
+        },
+        "1709": {
+          "box_cm": [
+            8.19,
+            5.8,
+            5.95,
+            1.31
+          ],
+          "fill": "pale",
+          "line": "none"
+        },
+        "1712": {
+          "box_cm": [
+            14.34,
+            5.8,
+            5.95,
+            1.31
+          ],
+          "fill": "pale",
+          "line": "none"
+        },
+        "1715": {
+          "box_cm": [
+            20.490000000000002,
+            5.8,
+            5.95,
+            1.31
+          ],
+          "fill": "pale",
+          "line": "none"
+        },
+        "1718": {
+          "box_cm": [
+            26.64,
+            5.8,
+            5.95,
+            1.31
+          ],
+          "fill": "pale",
+          "line": "none"
+        },
+        "1673": {
+          "line": "outline",
+          "points_cm": [
+            14.24,
+            7.29,
+            14.24,
+            14.9
+          ]
+        },
+        "1674": {
+          "line": "outline",
+          "points_cm": [
+            20.39,
+            7.29,
+            20.39,
+            14.9
+          ]
+        },
+        "1675": {
+          "line": "outline",
+          "points_cm": [
+            26.54,
+            7.29,
+            26.54,
+            14.9
+          ]
+        }
+      }
+    },
+    {
+      "id": "kw16-shared-endpoint",
+      "source": "kw16",
+      "page": 455,
+      "slide_sha256": "f8c0aa37a8a8c87574148366aa1cd641a80f26f94923eeff38e057356214aff0",
+      "intent": "convergent_validation",
+      "structure": "共同输入经三个并行方法，各自通往同一验证终点。连线表示共享输入与结果口径。",
+      "item_count": 3,
+      "include": [
+        "34",
+        "35",
+        "37",
+        "39",
+        "40",
+        "41",
+        "33",
+        "13",
+        "42",
+        "54",
+        "32"
+      ],
+      "omit": [
+        "11",
+        "12",
+        "45",
+        "46",
+        "57",
+        "58"
+      ],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "33": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "lead"
+        },
+        "176": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title",
+          "container": "2",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "9": {
+          "style": "cluster_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.body",
+          "container": "2",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "47": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title",
+          "container": "43",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "44": {
+          "style": "cluster_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.body",
+          "container": "43",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "59": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title",
+          "container": "55",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "56": {
+          "style": "cluster_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.2.body",
+          "container": "55",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "32": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "outcome"
+        }
+      },
+      "palette": {
+        "34": {
+          "line": "gray",
+          "points_cm": [
+            16.92,
+            6.12,
+            5.927,
+            7.099
+          ]
+        },
+        "35": {
+          "line": "gray",
+          "points_cm": [
+            16.92,
+            6.12,
+            16.764,
+            7.099
+          ]
+        },
+        "37": {
+          "line": "gray",
+          "points_cm": [
+            16.92,
+            6.12,
+            27.301,
+            7.097
+          ]
+        },
+        "39": {
+          "line": "gray",
+          "points_cm": [
+            5.927,
+            11.166,
+            16.92,
+            13.18
+          ]
+        },
+        "40": {
+          "line": "gray",
+          "points_cm": [
+            16.764,
+            11.166,
+            16.92,
+            13.18
+          ]
+        },
+        "41": {
+          "line": "gray",
+          "points_cm": [
+            27.301,
+            11.163,
+            16.92,
+            13.18
+          ]
+        },
+        "33": {
+          "box_cm": [
+            9.645,
+            4.77,
+            14.55,
+            1.35
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "2": {
+          "fill": "white",
+          "line": "outline"
+        },
+        "176": {
+          "box_cm": [
+            1.5688,
+            7.38,
+            8.72,
+            1.02
+          ],
+          "fill": "pale",
+          "line": "none"
+        },
+        "9": {
+          "box_cm": [
+            1.5987999999999998,
+            8.62,
+            8.64,
+            2.2
+          ],
+          "fill": "white",
+          "line": "none"
+        },
+        "43": {
+          "fill": "white",
+          "line": "outline"
+        },
+        "47": {
+          "box_cm": [
+            12.4062,
+            7.38,
+            8.72,
+            1.02
+          ],
+          "fill": "pale",
+          "line": "none"
+        },
+        "44": {
+          "box_cm": [
+            12.4362,
+            8.62,
+            8.64,
+            2.2
+          ],
+          "fill": "white",
+          "line": "none"
+        },
+        "55": {
+          "fill": "white",
+          "line": "outline"
+        },
+        "59": {
+          "box_cm": [
+            22.9436,
+            7.38,
+            8.72,
+            1.02
+          ],
+          "fill": "pale",
+          "line": "none"
+        },
+        "56": {
+          "box_cm": [
+            22.9736,
+            8.62,
+            8.64,
+            2.2
+          ],
+          "fill": "white",
+          "line": "none"
+        },
+        "32": {
+          "box_cm": [
+            9.645,
+            13.18,
+            14.55,
+            1.55
+          ],
+          "fill": "blue",
+          "line": "none"
+        }
+      }
+    },
+    {
+      "id": "kw16-five-stage-handoffs",
+      "source": "kw16",
+      "page": 458,
+      "slide_sha256": "c9f231c9c1094b5c50c351375ea412fd023bbde26606bb9361ee3eab1079f984",
+      "intent": "stage_handoffs",
+      "structure": "五个明确有先后关系的阶段，各列说明方法与交接产物。留出交接结果的独立层级。",
+      "item_count": 5,
+      "include": [
+        "3",
+        "218",
+        "9",
+        "249",
+        "247",
+        "250",
+        "35",
+        "219",
+        "36",
+        "11",
+        "223",
+        "6",
+        "2",
+        "220",
+        "7"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "3": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title"
+        },
+        "218": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.0.body"
+        },
+        "9": {
+          "style": "center_body",
+          "role": "label",
+          "max_lines": 2,
+          "field": "items.0.tag"
+        },
+        "249": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title"
+        },
+        "247": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.1.body"
+        },
+        "250": {
+          "style": "center_body",
+          "role": "label",
+          "max_lines": 2,
+          "field": "items.1.tag"
+        },
+        "35": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title"
+        },
+        "219": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.2.body"
+        },
+        "36": {
+          "style": "center_body",
+          "role": "label",
+          "max_lines": 2,
+          "field": "items.2.tag"
+        },
+        "11": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.3.title"
+        },
+        "223": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.3.body"
+        },
+        "6": {
+          "style": "center_body",
+          "role": "label",
+          "max_lines": 2,
+          "field": "items.3.tag"
+        },
+        "2": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.4.title"
+        },
+        "220": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.4.body"
+        },
+        "7": {
+          "style": "center_body",
+          "role": "label",
+          "max_lines": 2,
+          "field": "items.4.tag"
+        }
+      },
+      "palette": {
+        "3": {
+          "box_cm": [
+            1.24,
+            5.8,
+            6.03,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "218": {
+          "box_cm": [
+            1.24,
+            7.26,
+            6.03,
+            5.55
+          ],
+          "fill": "white",
+          "line": "outline"
+        },
+        "9": {
+          "box_cm": [
+            1.24,
+            13.05,
+            6.03,
+            3.2
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "249": {
+          "box_cm": [
+            7.57,
+            5.8,
+            6.03,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "247": {
+          "box_cm": [
+            7.57,
+            7.26,
+            6.03,
+            5.55
+          ],
+          "fill": "white",
+          "line": "outline"
+        },
+        "250": {
+          "box_cm": [
+            7.57,
+            13.05,
+            6.03,
+            3.2
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "35": {
+          "box_cm": [
+            13.9,
+            5.8,
+            6.03,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "219": {
+          "box_cm": [
+            13.9,
+            7.26,
+            6.03,
+            5.55
+          ],
+          "fill": "white",
+          "line": "outline"
+        },
+        "36": {
+          "box_cm": [
+            13.9,
+            13.05,
+            6.03,
+            3.2
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "11": {
+          "box_cm": [
+            20.23,
+            5.8,
+            6.03,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "223": {
+          "box_cm": [
+            20.23,
+            7.26,
+            6.03,
+            5.55
+          ],
+          "fill": "white",
+          "line": "outline"
+        },
+        "6": {
+          "box_cm": [
+            20.23,
+            13.05,
+            6.03,
+            3.2
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "2": {
+          "box_cm": [
+            26.56,
+            5.8,
+            6.03,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "220": {
+          "box_cm": [
+            26.56,
+            7.26,
+            6.03,
+            5.55
+          ],
+          "fill": "white",
+          "line": "outline"
+        },
+        "7": {
+          "box_cm": [
+            26.56,
+            13.05,
+            6.03,
+            3.2
+          ],
+          "fill": "pale",
+          "line": "outline"
+        }
+      }
+    },
+    {
+      "id": "kw16-9-baseline-table",
+      "source": "kw16-9",
+      "page": 20,
+      "slide_sha256": "2a6d50b9ac971b2343a6976a7d48a7b67bdf9edc6c1d47c779cf22826880d9d2",
+      "intent": "comparison_table",
+      "structure": "原生可编辑对照表，适合组别基线、终点或指标。底部放简短的单位或统计口径说明。",
+      "table": "7",
+      "equivalent_source": {
+        "source": "kw16",
+        "page": 190
+      },
+      "include": [
+        "7",
+        "9"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "9": {
+          "style": "left_body",
+          "role": "caption",
+          "max_lines": 2,
+          "field": "detail.footer"
+        }
+      },
+      "palette": {
+        "7": {
+          "box_cm": [
+            1.24,
+            5.8,
+            31.35,
+            8.2
+          ]
+        },
+        "9": {
+          "box_cm": [
+            1.24,
+            14.32,
+            31.35,
+            1.93
+          ],
+          "fill": "pale",
+          "line": "outline"
+        }
+      }
+    },
+    {
+      "id": "kw16-9-period-gantt",
+      "source": "kw16-9",
+      "page": 21,
+      "slide_sha256": "bc1b39feb753d171a5d5ce7c9e770a220d5082add9f75269c3fa1c8d9995d60e",
+      "intent": "gantt_schedule",
+      "structure": "根据输入的实际等长时段生成可编辑任务日程。蓝色单元格仅标记该任务覆盖的时段。",
+      "table": "24",
+      "equivalent_source": {
+        "source": "kw16",
+        "page": 204
+      },
+      "include": [
+        "24"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {},
+      "palette": {
+        "24": {
+          "box_cm": [
+            1.24,
+            5.8,
+            31.35,
+            10.45
+          ]
+        }
+      }
+    },
+    {
+      "id": "kw16-stacked-findings",
+      "source": "kw16",
+      "page": 397,
+      "slide_sha256": "4477de11e4bd7b16ed2ce38383141c9adfae153644321462dcc660dc82d765a4",
+      "intent": "parallel_cards",
+      "item_count": 3,
+      "structure": "三项独立发现上下排列，左侧是主题标签，右侧保留较宽的正文。省略原稿的组织上下级关系。",
+      "include": [
+        "1199",
+        "1198",
+        "44",
+        "130",
+        "1208",
+        "1207",
+        "45",
+        "131",
+        "289",
+        "30",
+        "46",
+        "132"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "44": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title",
+          "container": "1199",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "130": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.0.body",
+          "container": "1198",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "45": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title",
+          "container": "1208",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "131": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.1.body",
+          "container": "1207",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "46": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title",
+          "container": "289",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "132": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.2.body",
+          "container": "30",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "palette": {
+        "1199": {
+          "box_cm": [
+            1.24,
+            5.8,
+            7.62,
+            3.25
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "1198": {
+          "box_cm": [
+            8.95,
+            5.8,
+            23.64,
+            3.25
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "44": {
+          "box_cm": [
+            1.55,
+            6.18,
+            6.5,
+            2.49
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "130": {
+          "box_cm": [
+            9.38,
+            6.14,
+            22.78,
+            2.62
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "1208": {
+          "box_cm": [
+            1.24,
+            9.34,
+            7.62,
+            3.25
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "1207": {
+          "box_cm": [
+            8.95,
+            9.34,
+            23.64,
+            3.25
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "45": {
+          "box_cm": [
+            1.55,
+            9.72,
+            6.5,
+            2.49
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "131": {
+          "box_cm": [
+            9.38,
+            9.68,
+            22.78,
+            2.62
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "289": {
+          "box_cm": [
+            1.24,
+            12.879999999999999,
+            7.62,
+            3.25
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "30": {
+          "box_cm": [
+            8.95,
+            12.879999999999999,
+            23.64,
+            3.25
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "46": {
+          "box_cm": [
+            1.55,
+            13.26,
+            6.5,
+            2.49
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "132": {
+          "box_cm": [
+            9.38,
+            13.219999999999999,
+            22.78,
+            2.62
+          ],
+          "fill": "none",
+          "line": "none"
+        }
+      }
+    },
+    {
+      "id": "kw16-horizontal-group-comparison",
+      "source": "kw16",
+      "page": 342,
+      "slide_sha256": "752d15a157b89638e367a7e19066b67d294d793217c6afd3b985d570cd316286",
+      "intent": "paired_comparison",
+      "item_count": 3,
+      "structure": "两组上下排列，按列对齐三个比较维度。左侧胶囊标记组别，各列分别保留两组自己的小标题与说明。",
+      "include": [
+        "135",
+        "152",
+        "2",
+        "26",
+        "33",
+        "34",
+        "39",
+        "40",
+        "136",
+        "153",
+        "50",
+        "69",
+        "55",
+        "56",
+        "60",
+        "61"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "152": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 2,
+          "field": "headers.0",
+          "container": "13",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "2": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title"
+        },
+        "26": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.body"
+        },
+        "33": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title"
+        },
+        "34": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.body"
+        },
+        "39": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title"
+        },
+        "40": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.2.body"
+        },
+        "153": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 2,
+          "field": "headers.1",
+          "container": "137",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "50": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.right_title"
+        },
+        "69": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.right_body"
+        },
+        "55": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.right_title"
+        },
+        "56": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.right_body"
+        },
+        "60": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.right_title"
+        },
+        "61": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.2.right_body"
+        }
+      },
+      "palette": {
+        "135": {
+          "box_cm": [
+            1.24,
+            5.8,
+            31.35,
+            4.87
+          ]
+        },
+        "13": {
+          "fill": "blue",
+          "line": "none"
+        },
+        "118": {
+          "fill": "pale",
+          "line": "outline"
+        },
+        "152": {
+          "box_cm": [
+            1.42,
+            7.1,
+            4.7,
+            2.6
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "2": {
+          "box_cm": [
+            7.68,
+            6.12,
+            7.7,
+            1.03
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "26": {
+          "box_cm": [
+            7.68,
+            7.37,
+            7.68,
+            2.26
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "33": {
+          "box_cm": [
+            15.7,
+            6.12,
+            7.7,
+            1.03
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "34": {
+          "box_cm": [
+            15.7,
+            7.37,
+            7.68,
+            2.26
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "39": {
+          "box_cm": [
+            23.72,
+            6.12,
+            7.7,
+            1.03
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "40": {
+          "box_cm": [
+            23.72,
+            7.37,
+            7.68,
+            2.26
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "136": {
+          "box_cm": [
+            1.24,
+            11.05,
+            31.35,
+            4.87
+          ]
+        },
+        "137": {
+          "fill": "blue",
+          "line": "none"
+        },
+        "138": {
+          "fill": "pale",
+          "line": "outline"
+        },
+        "153": {
+          "box_cm": [
+            1.42,
+            12.350000000000001,
+            4.7,
+            2.6
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "50": {
+          "box_cm": [
+            7.68,
+            11.370000000000001,
+            7.7,
+            1.03
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "69": {
+          "box_cm": [
+            7.68,
+            12.620000000000001,
+            7.68,
+            2.26
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "55": {
+          "box_cm": [
+            15.7,
+            11.370000000000001,
+            7.7,
+            1.03
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "56": {
+          "box_cm": [
+            15.7,
+            12.620000000000001,
+            7.68,
+            2.26
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "60": {
+          "box_cm": [
+            23.72,
+            11.370000000000001,
+            7.7,
+            1.03
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "61": {
+          "box_cm": [
+            23.72,
+            12.620000000000001,
+            7.68,
+            2.26
+          ],
+          "fill": "none",
+          "line": "none"
+        }
+      }
+    },
+    {
+      "id": "kw16-stacked-handoffs",
+      "source": "kw16",
+      "page": 160,
+      "slide_sha256": "2abbaea47c65d4fe87335e634a59e32dff618ba43921041374095b9b0b9b9b67",
+      "intent": "stage_handoffs",
+      "item_count": 5,
+      "structure": "把五阶段纵向排成五行，分别对齐阶段、关键动作和交接物。留足可读文字宽度。",
+      "include": [
+        "15",
+        "685",
+        "683",
+        "4",
+        "688",
+        "687",
+        "5",
+        "691",
+        "689",
+        "6",
+        "694",
+        "693",
+        "7",
+        "697",
+        "695",
+        "20",
+        "700",
+        "699",
+        "21",
+        "703",
+        "701",
+        "9",
+        "706",
+        "705",
+        "23",
+        "709",
+        "707",
+        "24",
+        "712",
+        "711"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "4": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title",
+          "container": "15",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "688": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.body",
+          "container": "685",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "687": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.tag",
+          "container": "683",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "6": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title",
+          "container": "5",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "694": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.body",
+          "container": "691",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "693": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.tag",
+          "container": "689",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "20": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title",
+          "container": "7",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "700": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.2.body",
+          "container": "697",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "699": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.tag",
+          "container": "695",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "9": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.3.title",
+          "container": "21",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "706": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.3.body",
+          "container": "703",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "705": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.3.tag",
+          "container": "701",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "24": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.4.title",
+          "container": "23",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "712": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.4.body",
+          "container": "709",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "711": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.4.tag",
+          "container": "707",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "palette": {
+        "15": {
+          "box_cm": [
+            1.24,
+            5.8,
+            6.68,
+            1.92
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "685": {
+          "box_cm": [
+            7.64,
+            5.8,
+            17.47,
+            1.92
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "683": {
+          "box_cm": [
+            25.12,
+            5.8,
+            7.47,
+            1.92
+          ],
+          "fill": "mid",
+          "line": "none"
+        },
+        "4": {
+          "box_cm": [
+            1.53,
+            6.0,
+            5.7,
+            1.51
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "688": {
+          "box_cm": [
+            8.18,
+            5.97,
+            16.5,
+            1.57
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "687": {
+          "box_cm": [
+            25.77,
+            6.01,
+            6.18,
+            1.5
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "5": {
+          "box_cm": [
+            1.24,
+            7.93,
+            6.68,
+            1.92
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "691": {
+          "box_cm": [
+            7.64,
+            7.93,
+            17.47,
+            1.92
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "689": {
+          "box_cm": [
+            25.12,
+            7.93,
+            7.47,
+            1.92
+          ],
+          "fill": "mid",
+          "line": "none"
+        },
+        "6": {
+          "box_cm": [
+            1.53,
+            8.129999999999999,
+            5.7,
+            1.51
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "694": {
+          "box_cm": [
+            8.18,
+            8.1,
+            16.5,
+            1.57
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "693": {
+          "box_cm": [
+            25.77,
+            8.14,
+            6.18,
+            1.5
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "7": {
+          "box_cm": [
+            1.24,
+            10.059999999999999,
+            6.68,
+            1.92
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "697": {
+          "box_cm": [
+            7.64,
+            10.059999999999999,
+            17.47,
+            1.92
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "695": {
+          "box_cm": [
+            25.12,
+            10.059999999999999,
+            7.47,
+            1.92
+          ],
+          "fill": "mid",
+          "line": "none"
+        },
+        "20": {
+          "box_cm": [
+            1.53,
+            10.259999999999998,
+            5.7,
+            1.51
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "700": {
+          "box_cm": [
+            8.18,
+            10.229999999999999,
+            16.5,
+            1.57
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "699": {
+          "box_cm": [
+            25.77,
+            10.27,
+            6.18,
+            1.5
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "21": {
+          "box_cm": [
+            1.24,
+            12.19,
+            6.68,
+            1.92
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "703": {
+          "box_cm": [
+            7.64,
+            12.19,
+            17.47,
+            1.92
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "701": {
+          "box_cm": [
+            25.12,
+            12.19,
+            7.47,
+            1.92
+          ],
+          "fill": "mid",
+          "line": "none"
+        },
+        "9": {
+          "box_cm": [
+            1.53,
+            12.389999999999999,
+            5.7,
+            1.51
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "706": {
+          "box_cm": [
+            8.18,
+            12.36,
+            16.5,
+            1.57
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "705": {
+          "box_cm": [
+            25.77,
+            12.4,
+            6.18,
+            1.5
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "23": {
+          "box_cm": [
+            1.24,
+            14.32,
+            6.68,
+            1.92
+          ],
+          "fill": "blue",
+          "line": "none"
+        },
+        "709": {
+          "box_cm": [
+            7.64,
+            14.32,
+            17.47,
+            1.92
+          ],
+          "fill": "pale",
+          "line": "outline"
+        },
+        "707": {
+          "box_cm": [
+            25.12,
+            14.32,
+            7.47,
+            1.92
+          ],
+          "fill": "mid",
+          "line": "none"
+        },
+        "24": {
+          "box_cm": [
+            1.53,
+            14.52,
+            5.7,
+            1.51
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "712": {
+          "box_cm": [
+            8.18,
+            14.49,
+            16.5,
+            1.57
+          ],
+          "fill": "none",
+          "line": "none"
+        },
+        "711": {
+          "box_cm": [
+            25.77,
+            14.530000000000001,
+            6.18,
+            1.5
+          ],
+          "fill": "none",
+          "line": "none"
+        }
+      }
     }
   ]
 }

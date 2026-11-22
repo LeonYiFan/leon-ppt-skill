@@ -1,0 +1,297 @@
+{
+  "profiles": [
+    {
+      "id": "gut-single-panel",
+      "slide_sha256": "77ad1b94baa3fe935ea10ad6933622fdcf623f71d6aff86f35a5198eeb772963",
+      "source": "gut",
+      "page": 1,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "36",
+      "body": "31",
+      "max_body_lines": 2,
+      "artwork": [
+        "35"
+      ],
+      "omit": [
+        "27",
+        "28"
+      ],
+      "source_box": [
+        1.24,
+        16.63,
+        30.9,
+        0.36
+      ],
+      "figures": [
+        {
+          "id": "26",
+          "label": "25",
+          "container": "23",
+          "header": "24"
+        }
+      ]
+    },
+    {
+      "id": "gut-wide-and-square",
+      "slide_sha256": "792051d05b98ba3f1375c8436decf736605a373a548901607717f8c49b9ecbf6",
+      "source": "gut",
+      "page": 2,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "28",
+      "body": "26",
+      "max_body_lines": 2,
+      "artwork": [
+        "20"
+      ],
+      "omit": [],
+      "source_box": [
+        1.24,
+        16.18,
+        30.9,
+        0.36
+      ],
+      "figures": [
+        {
+          "id": "21",
+          "label": "12",
+          "container": "10",
+          "header": "11"
+        },
+        {
+          "id": "25",
+          "label": "24",
+          "container": "22",
+          "header": "23"
+        }
+      ]
+    },
+    {
+      "id": "gut-two-wide-panels",
+      "slide_sha256": "5cfd0e6cb20e03724ddc59099c7c3fa0af65938c34a41f6937f99116f82aafe5",
+      "source": "gut",
+      "page": 3,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "29",
+      "body": "4",
+      "max_body_lines": 2,
+      "artwork": [
+        "28"
+      ],
+      "omit": [],
+      "source_box": [
+        1.24,
+        16.18,
+        30.9,
+        0.36
+      ],
+      "figures": [
+        {
+          "id": "13",
+          "label": "12",
+          "container": "10",
+          "header": "11"
+        },
+        {
+          "id": "17",
+          "label": "16",
+          "container": "14",
+          "header": "15"
+        }
+      ]
+    },
+    {
+      "id": "gut-emphasize-left-panel",
+      "slide_sha256": "64a2b9c2cd9645526e63cfa82f4260e569da2ae451dfb97138c2d88632497ab8",
+      "source": "gut",
+      "page": 4,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "23",
+      "body": "18",
+      "max_body_lines": 2,
+      "artwork": [
+        "22"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.79,
+        31.35,
+        0.37
+      ],
+      "figures": [
+        {
+          "id": "13",
+          "label": "12",
+          "container": "10",
+          "header": "11"
+        },
+        {
+          "id": "17",
+          "label": "16",
+          "container": "14",
+          "header": "15"
+        }
+      ]
+    },
+    {
+      "id": "gut-balanced-panels",
+      "slide_sha256": "04e9bcc3270485079452350acbc89f9c82a573d6776726614700590af668442d",
+      "source": "gut",
+      "page": 5,
+      "intent": "figure_evidence",
+      "title": "5",
+      "summary": "52",
+      "body": "10",
+      "max_body_lines": 2,
+      "artwork": [
+        "51"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.9,
+        31.35,
+        0.35
+      ],
+      "shift_cm": {
+        "50": [
+          0,
+          0.12
+        ]
+      },
+      "figures": [
+        {
+          "id": "6",
+          "label": "19",
+          "container": "15",
+          "header": "16"
+        },
+        {
+          "id": "8",
+          "label": "20",
+          "container": "17",
+          "header": "18"
+        }
+      ]
+    },
+    {
+      "id": "guide-three-card-questions",
+      "slide_sha256": "ca31f5cde9096b00fd9f69364243268c3776e82dde5f6307f0cb9ea0c886bd59",
+      "source": "guide",
+      "page": 1,
+      "intent": "parallel_cards",
+      "title": "2",
+      "summary": "7",
+      "body": "5",
+      "max_body_lines": 1,
+      "artwork": [
+        "6"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.12,
+        30.5,
+        0.36
+      ],
+      "cards": [
+        {
+          "container": "20",
+          "title": "40",
+          "body_container": "34",
+          "body": "62",
+          "badge": "36"
+        },
+        {
+          "container": "43",
+          "title": "48",
+          "body_container": "45",
+          "body": "64",
+          "badge": "46"
+        },
+        {
+          "container": "55",
+          "title": "60",
+          "body_container": "57",
+          "body": "69",
+          "badge": "58"
+        }
+      ]
+    },
+    {
+      "id": "guide-paired-risk-response",
+      "slide_sha256": "838d2e317bb8f417f9a5a5e34e90dbe653b8599740f256072b5e1f3d3c5c11cf",
+      "source": "guide",
+      "page": 2,
+      "intent": "risk_response",
+      "title": "2",
+      "summary": "76",
+      "artwork": [
+        "75"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        18.08,
+        30.8,
+        0.36
+      ],
+      "columns": [
+        {
+          "container": "189",
+          "header": "187",
+          "label": "•  预期风险",
+          "rows": [
+            [
+              "193",
+              "195",
+              "3",
+              "194"
+            ],
+            [
+              "10",
+              "198",
+              "4",
+              "197"
+            ],
+            [
+              "11",
+              "200",
+              "5",
+              "199"
+            ]
+          ]
+        },
+        {
+          "container": "191",
+          "header": "192",
+          "label": "•  应对措施",
+          "rows": [
+            [
+              "12",
+              "202",
+              "7",
+              "201"
+            ],
+            [
+              "13",
+              "204",
+              "8",
+              "203"
+            ],
+            [
+              "14",
+              "206",
+              "9",
+              "205"
+            ]
+          ]
+        }
+      ]
+    }
+  ]
+}

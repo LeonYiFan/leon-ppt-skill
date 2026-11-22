@@ -1,0 +1,80 @@
+{
+  "prefer_native": true,
+  "meta": {
+    "title_cn": "研究证据与可复核流程",
+    "title_en": "Research evidence and verification"
+  },
+  "sections": ["验证任务", "主要终点", "工作流程", "证据核对"],
+  "slides": [
+    {
+      "type": "triple",
+      "title": "三个任务各核对一种偏差",
+      "bullets": ["在预设时间窗独立复核。"],
+      "cards": [
+        {"title": "取样", "note": "核对纳入差异"},
+        {"title": "测量", "note": "复测仪器波动"},
+        {"title": "分析", "note": "复核统计口径"}
+      ],
+      "summary": "汇总三类偏差，复核结论稳定性。",
+      "source": "合成练习记录 A1",
+      "notes": "【讲】三组任务使用同一记录格式。"
+    },
+    {
+      "type": "bullets",
+      "title": "三路验证共用一个终点",
+      "lead": "统一样本",
+      "outcome": "复核方向一致",
+      "items": [
+        {"title": "内部复核", "body": "重复测量"},
+        {"title": "独立测量", "body": "更换平台"},
+        {"title": "外部复现", "body": "复核读数"}
+      ],
+      "summary": "统一终点口径后比较结果。",
+      "source": "合成练习记录 A2",
+      "notes": "【讲】比较前冻结终点定义。"
+    },
+    {
+      "type": "bullets",
+      "title": "四次交接各有一项产物",
+      "items": [
+        {"title": "登记", "body": "统一纳入标准\n核对样本批次", "tag": "样本清单"},
+        {"title": "准备", "body": "预设主要终点\n冻结分析计划", "tag": "分析方案"},
+        {"title": "分析", "body": "核对数据分布\n记录缺失数值", "tag": "统计结果"},
+        {"title": "复核", "body": "检查方向和区间\n登记差异原因", "tag": "复核报告"}
+      ],
+      "summary": "每次交接都可追溯到清单或报告。",
+      "source": "合成练习记录 A3",
+      "notes": "【讲】每个阶段保留审核记录。"
+    },
+    {
+      "type": "bullets",
+      "title": "安静条件使用统一计分口径",
+      "lead": "按预设规则核对回忆项数。",
+      "detail": {"body": "使用同一材料和计分规则。\n按时间窗核对读数。\n演示读数不用于推断。"},
+      "figures": [
+        {"path": "example-figures/quiet.png", "caption": "安静条件示意"}
+      ],
+      "summary": "读数反映本次练习的得分。",
+      "source": "合成练习图 Q1",
+      "notes": "【讲】本页插图仅用于核对原图和备注。"
+    },
+    {
+      "type": "bullets",
+      "title": "两条验证线检查不同假设",
+      "lead": "同一观察可有\n两条验证路径",
+      "items": [
+        {"title": "观察条件", "steps": ["复核测量时间", "检查重复误差"]},
+        {"title": "样本差异", "steps": ["核对分层标准", "检查选择偏差", "复核独立样本"]}
+      ],
+      "summary": "两条验证线分别记载检验结果。",
+      "source": "合成练习记录 A5",
+      "notes": "【讲】两条假设分别接受独立检验。"
+    }
+  ],
+  "audit": {
+    "identity_terms": [],
+    "figure_sources": {
+      "example-figures/quiet.png": {"source": "合成练习图 Q1", "panel": "Q1"}
+    }
+  }
+}

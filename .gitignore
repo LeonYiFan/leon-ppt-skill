@@ -13,5 +13,6 @@ __pycache__/
 *.pptx
 !/.agents/skills/leon-ppt-skill/assets/paper-report-template.pptx
 !/.agents/skills/leon-ppt-skill/assets/template-deck.pptx
+!/.agents/skills/leon-ppt-skill/assets/portable-library/native/*.pptx
 **/native-library/
 **/assets/legacy/

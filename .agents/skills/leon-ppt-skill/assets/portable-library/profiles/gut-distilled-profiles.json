@@ -1,0 +1,1992 @@
+{
+  "profiles": [
+    {
+      "id": "gut-method-single-evidence",
+      "slide_sha256": "696f7f335088fd63b7b590dd0f19adc4d8f8ecaceb0b165550f1f05addcd1831",
+      "source": "gut",
+      "page": 6,
+      "intent": "method_evidence",
+      "title": "2",
+      "summary": "32",
+      "body": "7",
+      "max_body_lines": 2,
+      "artwork": [
+        "31"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.82,
+        31.3,
+        0.36
+      ],
+      "text_colors": {
+        "7": "111820"
+      },
+      "figures": [
+        {
+          "id": "15",
+          "label": "14",
+          "container": "13",
+          "header": "14"
+        }
+      ],
+      "slots": {
+        "3": {
+          "field": "stages.0",
+          "role": "label",
+          "max_lines": 1
+        },
+        "4": {
+          "field": "stages.1",
+          "role": "label",
+          "max_lines": 1
+        },
+        "5": {
+          "field": "stages.2",
+          "role": "label",
+          "max_lines": 1
+        },
+        "17": {
+          "field": "detail.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "18": {
+          "field": "detail.lead",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "28": {
+          "field": "detail.footer",
+          "role": "body",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "19": {
+          "value": "1",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "20": {
+          "field": "items.0.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "21": {
+          "field": "items.0.body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "22": {
+          "value": "2",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "23": {
+          "field": "items.1.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "24": {
+          "field": "items.1.body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "25": {
+          "value": "3",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "26": {
+          "field": "items.2.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "27": {
+          "field": "items.2.body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "16",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        }
+      },
+      "shift_cm": {
+        "30": [
+          0,
+          0.07
+        ]
+      },
+      "active_stage": 1
+    },
+    {
+      "id": "gut-method-two-evidence-panels",
+      "slide_sha256": "004b81083ef46ea8c2c97b7e433b622e15cb0fe5b46bd90e71f0d0c8daa39bc7",
+      "source": "gut",
+      "page": 7,
+      "intent": "method_evidence",
+      "title": "2",
+      "summary": "42",
+      "body": "39",
+      "max_body_lines": 2,
+      "artwork": [
+        "41"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.82,
+        31.3,
+        0.36
+      ],
+      "text_colors": {
+        "39": "111820"
+      },
+      "figures": [
+        {
+          "id": "17",
+          "label": "15",
+          "container": "13",
+          "header": "14"
+        },
+        {
+          "id": "18",
+          "label": "16",
+          "container": "13",
+          "header": "14"
+        }
+      ],
+      "slots": {
+        "33": {
+          "field": "stages.0",
+          "role": "label",
+          "max_lines": 1
+        },
+        "35": {
+          "field": "stages.1",
+          "role": "label",
+          "max_lines": 1
+        },
+        "37": {
+          "field": "stages.2",
+          "role": "label",
+          "max_lines": 1
+        },
+        "20": {
+          "field": "detail.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "21": {
+          "field": "detail.lead",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "31": {
+          "field": "detail.footer",
+          "role": "body",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "22": {
+          "value": "1",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "23": {
+          "field": "items.0.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "24": {
+          "field": "items.0.body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "25": {
+          "value": "2",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "26": {
+          "field": "items.1.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "27": {
+          "field": "items.1.body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "28": {
+          "value": "3",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "29": {
+          "field": "items.2.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "30": {
+          "field": "items.2.body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "19",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "14": {
+          "value": "原图证据",
+          "role": "label",
+          "max_lines": 1,
+          "container": "13",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        }
+      },
+      "shift_cm": {
+        "40": [
+          0,
+          0.07
+        ]
+      },
+      "active_stage": 2
+    },
+    {
+      "id": "gut-screening-list-validation",
+      "slide_sha256": "70e3f2630e2af9f91079b8b8c255a616a9442cd7ec700bfef08186efebd2c271",
+      "source": "gut",
+      "page": 8,
+      "intent": "screening_validation",
+      "title": "58",
+      "summary": "7",
+      "body": "165",
+      "max_body_lines": 1,
+      "artwork": [
+        "5"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        18.49,
+        31.3,
+        0.36
+      ],
+      "text_colors": {
+        "165": "111820"
+      },
+      "figures": [
+        {
+          "id": "60",
+          "label": "10",
+          "container": "6",
+          "header": "10"
+        },
+        {
+          "id": "159",
+          "label": "150",
+          "container": "149",
+          "header": "150"
+        }
+      ],
+      "slots": {
+        "130": {
+          "field": "detail.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "129",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "133": {
+          "field": "items.0.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "129",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "134": {
+          "field": "items.1.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "129",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "135": {
+          "field": "items.2.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "129",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "136": {
+          "field": "items.3.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "129",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "137": {
+          "field": "items.4.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "129",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "gut-three-equal-evidence-panels",
+      "slide_sha256": "801e3ed89567751c918dc6ea0a4f9d02a929f115534d07e4b8ad4e712b370e1e",
+      "source": "gut",
+      "page": 9,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "27",
+      "body": "22",
+      "max_body_lines": 2,
+      "artwork": [
+        "26"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.93,
+        31.3,
+        0.36
+      ],
+      "text_colors": {
+        "22": "111820"
+      },
+      "figures": [
+        {
+          "id": "13",
+          "label": "12",
+          "container": "10",
+          "header": "11"
+        },
+        {
+          "id": "17",
+          "label": "16",
+          "container": "14",
+          "header": "15"
+        },
+        {
+          "id": "21",
+          "label": "20",
+          "container": "18",
+          "header": "19"
+        }
+      ],
+      "shift_cm": {
+        "25": [
+          0,
+          0.13
+        ]
+      }
+    },
+    {
+      "id": "gut-figure-metrics-figure",
+      "slide_sha256": "cfd07967a51f2285bf2730a7528d7c9924624d9862877fa606030c0039836233",
+      "source": "gut",
+      "page": 10,
+      "intent": "metric_evidence",
+      "title": "2",
+      "summary": "31",
+      "body": "26",
+      "max_body_lines": 2,
+      "artwork": [
+        "30"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        18.67,
+        31.3,
+        0.36
+      ],
+      "text_colors": {
+        "26": "111820"
+      },
+      "figures": [
+        {
+          "id": "110",
+          "label": "12",
+          "container": "10",
+          "header": "11"
+        },
+        {
+          "id": "25",
+          "label": "24",
+          "container": "22",
+          "header": "23"
+        }
+      ],
+      "slots": {
+        "90": {
+          "field": "detail.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "88",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "100": {
+          "field": "metrics.0.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "88",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "96": {
+          "field": "metrics.1.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "88",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "91": {
+          "field": "metrics.0.body",
+          "role": "body",
+          "max_lines": 2,
+          "container": "99",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "92": {
+          "field": "metrics.1.body",
+          "role": "body",
+          "max_lines": 2,
+          "container": "95",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "gut-paired-evidence-and-readouts",
+      "slide_sha256": "134716953f7a902086166f8674e4b6a79dc8028042f7a910e804aa1b83bfec03",
+      "source": "gut",
+      "page": 11,
+      "intent": "paired_evidence",
+      "title": "2",
+      "summary": "27",
+      "body": "22",
+      "max_body_lines": 2,
+      "artwork": [
+        "26"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.45,
+        31.3,
+        0.36
+      ],
+      "text_colors": {
+        "22": "111820"
+      },
+      "figures": [
+        {
+          "id": "13",
+          "label": "12",
+          "container": "10",
+          "header": "11"
+        },
+        {
+          "id": "19",
+          "label": "18",
+          "container": "16",
+          "header": "17"
+        }
+      ],
+      "slots": {
+        "15": {
+          "field": "items.0.body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "14",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "21": {
+          "field": "items.1.body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "20",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "gut-preprocessing-and-two-term-formula",
+      "slide_sha256": "5f9aa2d84e8bbf0393b75abb02b90c1e7cc114ab76395858c1b93e350d030a33",
+      "source": "gut",
+      "page": 12,
+      "intent": "formula_steps",
+      "title": "2",
+      "summary": "34",
+      "body": "29",
+      "max_body_lines": 2,
+      "artwork": [
+        "33"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        18.1,
+        31.3,
+        0.36
+      ],
+      "text_colors": {
+        "29": "111820"
+      },
+      "slots": {
+        "41": {
+          "field": "items.0.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "39",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "45": {
+          "field": "items.1.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "43",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "49": {
+          "field": "items.2.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "47",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "53": {
+          "field": "items.3.title",
+          "role": "label",
+          "max_lines": 1,
+          "container": "51",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "61": {
+          "field": "formula.name",
+          "role": "label",
+          "max_lines": 1,
+          "container": "30",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "67": {
+          "field": "formula.left",
+          "role": "label",
+          "max_lines": 1,
+          "container": "63",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "75": {
+          "field": "formula.left_note",
+          "role": "body",
+          "max_lines": 1,
+          "container": "63",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "79": {
+          "field": "formula.operator",
+          "role": "label",
+          "max_lines": 1,
+          "container": "30",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ],
+          "box_cm": [
+            20.7088,
+            11.6402,
+            1.96,
+            1.7115
+          ],
+          "fixed_text": true
+        },
+        "69": {
+          "field": "formula.right",
+          "role": "label",
+          "max_lines": 1,
+          "container": "65",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        },
+        "77": {
+          "field": "formula.right_note",
+          "role": "body",
+          "max_lines": 1,
+          "container": "65",
+          "inset_pt": [
+            2,
+            0,
+            2,
+            0
+          ]
+        }
+      }
+    },
+    {
+      "id": "gut-three-portrait-evidence-panels",
+      "slide_sha256": "52159c70ece5af60ffbc80b5227adb6282f3eb7f830b8abf930376c7c414d376",
+      "source": "gut",
+      "page": 13,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "27",
+      "body": "22",
+      "max_body_lines": 2,
+      "artwork": [
+        "26"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.29,
+        31.3,
+        0.36
+      ],
+      "text_colors": {
+        "22": "111820"
+      },
+      "figures": [
+        {
+          "id": "13",
+          "label": "12",
+          "container": "10",
+          "header": "11"
+        },
+        {
+          "id": "17",
+          "label": "16",
+          "container": "14",
+          "header": "15"
+        },
+        {
+          "id": "21",
+          "label": "20",
+          "container": "18",
+          "header": "19"
+        }
+      ]
+    },
+    {
+      "id": "gut-four-stage-study-overview",
+      "slide_sha256": "9adb7a5f6fdc539f57d967955ac4d7aa3d16b4545d79b42151e0ed401ad205e9",
+      "source": "gut",
+      "page": 14,
+      "intent": "study_overview",
+      "title": "5",
+      "summary": "76",
+      "artwork": [
+        "75"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.9,
+        31.3,
+        0.36
+      ],
+      "figures": [
+        {
+          "id": "12",
+          "box_cm": [
+            0.95,
+            3.51,
+            10.17,
+            12.65
+          ]
+        }
+      ],
+      "slots": {
+        "28": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title",
+          "container": "27",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "30": {
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.body",
+          "container": "26",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            14.03,
+            3.4299999999999997,
+            18.69,
+            1.39
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "34": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.tag",
+          "container": "33",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "36": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "items.0.result",
+          "container": "33",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "39": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title",
+          "container": "38",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "41": {
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.body",
+          "container": "37",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            14.03,
+            7.069999999999999,
+            18.69,
+            1.39
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "45": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.tag",
+          "container": "44",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "47": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "items.1.result",
+          "container": "44",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "50": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title",
+          "container": "49",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "52": {
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.2.body",
+          "container": "48",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            14.03,
+            10.71,
+            18.69,
+            1.39
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "56": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.tag",
+          "container": "55",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "58": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "items.2.result",
+          "container": "55",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "61": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.3.title",
+          "container": "60",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "63": {
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.3.body",
+          "container": "59",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            14.03,
+            14.35,
+            18.69,
+            1.39
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "67": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.3.tag",
+          "container": "66",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "69": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "items.3.result",
+          "container": "66",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ]
+        },
+        "15": {
+          "role": "label",
+          "max_lines": 1,
+          "value": "01",
+          "fixed_text": true
+        },
+        "18": {
+          "role": "label",
+          "max_lines": 1,
+          "value": "02",
+          "fixed_text": true
+        },
+        "21": {
+          "role": "label",
+          "max_lines": 1,
+          "value": "03",
+          "fixed_text": true
+        },
+        "24": {
+          "role": "label",
+          "max_lines": 1,
+          "value": "04",
+          "fixed_text": true
+        },
+        "32": {
+          "role": "caption",
+          "max_lines": 1,
+          "field": "figures.0.caption",
+          "container": "9",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            0.9,
+            2.59,
+            10.3,
+            0.78
+          ],
+          "text_color": "173467",
+          "optional": true
+        }
+      }
+    },
+    {
+      "id": "gut-cohort-paired-readouts",
+      "slide_sha256": "38f9e5940f457afb4260a0448e2d98f2cea4bc332736a1d0c11fa9e41fa2d803",
+      "source": "gut",
+      "page": 15,
+      "intent": "cohort_readouts",
+      "title": "2",
+      "summary": "35",
+      "artwork": [
+        "34"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.9,
+        31.3,
+        0.36
+      ],
+      "body": "37",
+      "max_body_lines": 2,
+      "figures": [
+        {
+          "id": "13",
+          "label": "12",
+          "container": "10",
+          "header": "11"
+        },
+        {
+          "id": "23",
+          "label": "22",
+          "container": "20",
+          "header": "21"
+        }
+      ],
+      "geometry": {
+        "12": [
+          1.4624,
+          5.74833,
+          14.96,
+          0.83
+        ],
+        "22": [
+          17.4624,
+          5.74833,
+          14.96,
+          0.83
+        ]
+      },
+      "slots": {
+        "14": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "headers.0",
+          "container": "10",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            2.0024,
+            14.02833,
+            4.2,
+            0.83
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        },
+        "15": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "metrics.0.0",
+          "container": "10",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            2.0024,
+            14.86833,
+            4.2,
+            1.16
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "16": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "headers.1",
+          "container": "10",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            6.8024,
+            14.02833,
+            4.2,
+            0.83
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        },
+        "17": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "metrics.0.1",
+          "container": "10",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            6.8024,
+            14.86833,
+            4.2,
+            1.16
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "18": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "headers.2",
+          "container": "10",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            11.6024,
+            14.02833,
+            4.2,
+            0.83
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        },
+        "19": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "metrics.0.2",
+          "container": "10",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            11.6024,
+            14.86833,
+            4.2,
+            1.16
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "24": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "headers.0",
+          "container": "20",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            18.0024,
+            14.02833,
+            4.2,
+            0.83
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        },
+        "25": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "metrics.1.0",
+          "container": "20",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            18.0024,
+            14.86833,
+            4.2,
+            1.16
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "26": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "headers.1",
+          "container": "20",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            22.8024,
+            14.02833,
+            4.2,
+            0.83
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        },
+        "27": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "metrics.1.1",
+          "container": "20",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            22.8024,
+            14.86833,
+            4.2,
+            1.16
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "28": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "headers.2",
+          "container": "20",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            27.6024,
+            14.02833,
+            4.2,
+            0.83
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        },
+        "29": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "metrics.1.2",
+          "container": "20",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            27.6024,
+            14.86833,
+            4.2,
+            1.16
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        }
+      },
+      "text_colors": {
+        "37": "111820"
+      }
+    },
+    {
+      "id": "gut-four-evidence-cards",
+      "slide_sha256": "92b7fe4cb679a46238dc00732a7813314080aa03feb156cb5a1128fecdeec3d5",
+      "source": "gut",
+      "page": 16,
+      "intent": "figure_evidence",
+      "title": "2",
+      "summary": "8",
+      "artwork": [
+        "7"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.9,
+        31.3,
+        0.36
+      ],
+      "body": "27",
+      "max_body_lines": 2,
+      "figures": [
+        {
+          "id": "13",
+          "label": "12",
+          "container": "10",
+          "header": "11"
+        },
+        {
+          "id": "18",
+          "label": "17",
+          "container": "15",
+          "header": "16"
+        },
+        {
+          "id": "22",
+          "label": "21",
+          "container": "19",
+          "header": "20"
+        },
+        {
+          "id": "26",
+          "label": "25",
+          "container": "23",
+          "header": "24"
+        }
+      ],
+      "text_colors": {
+        "27": "111820"
+      },
+      "summary_floor_cm": 14.8
+    },
+    {
+      "id": "gut-paired-figure-counts",
+      "slide_sha256": "e11597ef3a41993ed8a9e4b1fc0009f2d3ed99cadfa2aa856858c6fcb0edb1a6",
+      "source": "gut",
+      "page": 17,
+      "intent": "paired_counts",
+      "title": "2",
+      "summary": "29",
+      "artwork": [
+        "28"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.9,
+        31.3,
+        0.36
+      ],
+      "body": "24",
+      "max_body_lines": 2,
+      "figures": [
+        {
+          "id": "5",
+          "label": "12",
+          "container": "10",
+          "header": "11",
+          "box_cm": [
+            4.08,
+            7.31,
+            6.3,
+            8.46
+          ]
+        },
+        {
+          "id": "7",
+          "label": "19",
+          "container": "17",
+          "header": "18",
+          "box_cm": [
+            17.34,
+            7.39,
+            6.77,
+            8.46
+          ]
+        }
+      ],
+      "geometry": {
+        "12": [
+          1.51716,
+          5.73467,
+          14.84856,
+          0.91974
+        ],
+        "19": [
+          17.51934,
+          5.73467,
+          14.84856,
+          0.91974
+        ]
+      },
+      "slots": {
+        "14": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title",
+          "container": "10",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            10.86033,
+            7.99428,
+            5.2998,
+            0.96516
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        },
+        "15": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "items.0.value",
+          "container": "10",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            10.86033,
+            9.49312,
+            5.2998,
+            1.73729
+          ],
+          "fixed_text": true,
+          "text_color": "D71920"
+        },
+        "16": {
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.body",
+          "container": "10",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            10.86033,
+            12.2637,
+            5.2998,
+            2.29368
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        },
+        "21": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title",
+          "container": "17",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            26.31426,
+            7.99428,
+            5.68814,
+            0.96516
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        },
+        "22": {
+          "role": "body",
+          "max_lines": 1,
+          "field": "items.1.value",
+          "container": "17",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            26.31426,
+            9.49312,
+            5.68814,
+            1.73729
+          ],
+          "fixed_text": true,
+          "text_color": "D71920"
+        },
+        "23": {
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.body",
+          "container": "17",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            26.31426,
+            12.2637,
+            5.68814,
+            2.29368
+          ],
+          "fixed_text": true,
+          "text_color": "111820"
+        }
+      },
+      "shift_cm": {
+        "3": [
+          0,
+          -0.9
+        ],
+        "27": [
+          0,
+          -0.62
+        ]
+      },
+      "text_colors": {
+        "24": "111820"
+      }
+    },
+    {
+      "id": "gut-three-by-two-strata",
+      "slide_sha256": "b312e71e370562610e9cc63b6053322f88174df227fc2c5bf788c50131e9bc4a",
+      "source": "gut",
+      "page": 18,
+      "intent": "stratified_evidence",
+      "title": "2",
+      "summary": "32",
+      "artwork": [
+        "31"
+      ],
+      "omit": [],
+      "source_box": [
+        1.1,
+        16.9,
+        31.3,
+        0.36
+      ],
+      "body": "27",
+      "max_body_lines": 1,
+      "figures": [
+        {
+          "id": "13",
+          "box_cm": [
+            3.9299999999999997,
+            5.57,
+            8.440000000000001,
+            5.35
+          ]
+        },
+        {
+          "id": "14",
+          "box_cm": [
+            3.9299999999999997,
+            11.07,
+            8.440000000000001,
+            5.35
+          ]
+        },
+        {
+          "id": "18",
+          "box_cm": [
+            13.73,
+            5.57,
+            8.440000000000001,
+            5.35
+          ]
+        },
+        {
+          "id": "19",
+          "box_cm": [
+            13.73,
+            11.07,
+            8.440000000000001,
+            5.35
+          ]
+        },
+        {
+          "id": "23",
+          "box_cm": [
+            23.529999999999998,
+            5.57,
+            8.440000000000001,
+            5.35
+          ]
+        },
+        {
+          "id": "24",
+          "box_cm": [
+            23.529999999999998,
+            11.07,
+            8.440000000000001,
+            5.35
+          ]
+        }
+      ],
+      "geometry": {
+        "27": [
+          1.2,
+          2.51,
+          31.2,
+          1.5
+        ],
+        "10": [
+          3.46,
+          4.26,
+          9.38,
+          12.42
+        ],
+        "11": [
+          3.55,
+          4.32,
+          9.200000000000001,
+          1.09
+        ],
+        "15": [
+          13.26,
+          4.26,
+          9.38,
+          12.42
+        ],
+        "16": [
+          13.35,
+          4.32,
+          9.200000000000001,
+          1.09
+        ],
+        "20": [
+          23.06,
+          4.26,
+          9.38,
+          12.42
+        ],
+        "21": [
+          23.15,
+          4.32,
+          9.200000000000001,
+          1.09
+        ]
+      },
+      "slots": {
+        "12": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "headers.0",
+          "container": "11",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            3.77,
+            4.46,
+            8.760000000000002,
+            0.78
+          ]
+        },
+        "17": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "headers.1",
+          "container": "16",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            13.57,
+            4.46,
+            8.760000000000002,
+            0.78
+          ]
+        },
+        "22": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "headers.2",
+          "container": "21",
+          "inset_pt": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "box_cm": [
+            23.369999999999997,
+            4.46,
+            8.760000000000002,
+            0.78
+          ]
+        },
+        "25": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "stages.0",
+          "box_cm": [
+            0.5,
+            7.82,
+            2.68,
+            0.97
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        },
+        "26": {
+          "role": "label",
+          "max_lines": 1,
+          "field": "stages.1",
+          "box_cm": [
+            0.5,
+            13.32,
+            2.68,
+            0.97
+          ],
+          "fixed_text": true,
+          "text_color": "173467"
+        }
+      },
+      "text_colors": {
+        "27": "111820"
+      }
+    }
+  ]
+}

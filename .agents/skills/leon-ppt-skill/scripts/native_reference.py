@@ -424,9 +424,21 @@ class NativeLibrary:
         self._index = {}
         self._approved = None
         self._hashes = {}
+        self._sources = None
+
+    def _registered_sources(self):
+        if self._sources is None:
+            self._sources = set(SOURCES)
+            manifest = self.root / "manifest.json"
+            if manifest.is_file():
+                data = json.loads(manifest.read_text(encoding="utf-8-sig"))
+                self._sources.update(item["id"] for item in data["sources"]
+                                     if isinstance(item.get("id"), str)
+                                     and re.fullmatch(r"[a-z][a-z0-9-]*", item["id"]))
+        return self._sources
 
     def _open(self, source, page):
-        if source not in SOURCES or type(page) is not int or page < 1:
+        if source not in self._registered_sources() or type(page) is not int or page < 1:
             raise ValueError("native reference requires a source alias and one-based page")
         z = ZipFile(self.root / "native" / (source+".pptx"))
         try:

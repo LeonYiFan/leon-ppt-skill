@@ -1,0 +1,3442 @@
+{
+  "components": [
+    {
+      "id": "research-comparison-with-method-strip",
+      "source": "pancreas-research",
+      "page": 1,
+      "slide_sha256": "babb19afa9130534a739d8481ee1851a021489e2901487ad5403b03bdcf11012",
+      "intent": "comparison_table",
+      "structure": "把统计口径移到表格上方，保留左侧蓝色定位条和可编辑单元格，适合口径需要先读的比较表。",
+      "include": [
+        "11",
+        "18",
+        "21"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.35,
+        31.35,
+        10.9
+      ],
+      "slots": {
+        "18": {
+          "style": "left_body",
+          "role": "caption",
+          "field": "detail.footer",
+          "max_lines": 2
+        }
+      },
+      "palette": {
+        "11": {
+          "box_cm": [
+            1.24,
+            7.13,
+            0.18,
+            9.12
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "18": {
+          "box_cm": [
+            1.24,
+            5.35,
+            31.35,
+            1.46
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "21": {
+          "box_cm": [
+            1.67,
+            7.13,
+            30.92,
+            9.12
+          ]
+        }
+      },
+      "table": "21"
+    },
+    {
+      "id": "center-blue-three-stage-cards",
+      "source": "pancreas-center",
+      "page": 1,
+      "slide_sha256": "bcc57f5038cb623d0514a9115ed2cb2de7343e2b01264a72fe81a271bfba21fb",
+      "intent": "parallel_cards",
+      "structure": "三项横排的蓝色标题块，分开各阶段的执行内容，正文每栏可容三行。",
+      "include": [
+        "23",
+        "24",
+        "25",
+        "26",
+        "27",
+        "28",
+        "13",
+        "14",
+        "15",
+        "16",
+        "17",
+        "18"
+      ],
+      "omit": [],
+      "box": [
+        1.35,
+        5.5,
+        31.37,
+        10.47
+      ],
+      "slots": {
+        "16": {
+          "style": "white_label",
+          "role": "label",
+          "field": "items.0.title",
+          "max_lines": 1,
+          "container": "23"
+        },
+        "13": {
+          "style": "body",
+          "role": "body",
+          "field": "items.0.body",
+          "max_lines": 3,
+          "container": "26"
+        },
+        "17": {
+          "style": "white_label",
+          "role": "label",
+          "field": "items.1.title",
+          "max_lines": 1,
+          "container": "24"
+        },
+        "14": {
+          "style": "body",
+          "role": "body",
+          "field": "items.1.body",
+          "max_lines": 3,
+          "container": "27"
+        },
+        "18": {
+          "style": "white_label",
+          "role": "label",
+          "field": "items.2.title",
+          "max_lines": 1,
+          "container": "25"
+        },
+        "15": {
+          "style": "body",
+          "role": "body",
+          "field": "items.2.body",
+          "max_lines": 3,
+          "container": "28"
+        }
+      },
+      "palette": {
+        "23": {
+          "box_cm": [
+            1.35,
+            5.5,
+            10.15,
+            1.28
+          ],
+          "fill": "blue",
+          "line": "blue",
+          "flat": true
+        },
+        "26": {
+          "box_cm": [
+            1.35,
+            7.07,
+            10.15,
+            8.9
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "16": {
+          "box_cm": [
+            1.5,
+            5.59,
+            9.85,
+            1.1
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true,
+          "front": true
+        },
+        "13": {
+          "box_cm": [
+            1.84,
+            7.45,
+            9.17,
+            7.8
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true,
+          "front": true
+        },
+        "24": {
+          "box_cm": [
+            11.96,
+            5.5,
+            10.15,
+            1.28
+          ],
+          "fill": "blue",
+          "line": "blue",
+          "flat": true
+        },
+        "27": {
+          "box_cm": [
+            11.96,
+            7.07,
+            10.15,
+            8.9
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "17": {
+          "box_cm": [
+            12.110000000000001,
+            5.59,
+            9.85,
+            1.1
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true,
+          "front": true
+        },
+        "14": {
+          "box_cm": [
+            12.450000000000001,
+            7.45,
+            9.17,
+            7.8
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true,
+          "front": true
+        },
+        "25": {
+          "box_cm": [
+            22.57,
+            5.5,
+            10.15,
+            1.28
+          ],
+          "fill": "blue",
+          "line": "blue",
+          "flat": true
+        },
+        "28": {
+          "box_cm": [
+            22.57,
+            7.07,
+            10.15,
+            8.9
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "18": {
+          "box_cm": [
+            22.72,
+            5.59,
+            9.85,
+            1.1
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true,
+          "front": true
+        },
+        "15": {
+          "box_cm": [
+            23.06,
+            7.45,
+            9.17,
+            7.8
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true,
+          "front": true
+        }
+      },
+      "item_count": 3
+    },
+    {
+      "id": "endocrine-two-hypothesis-branches",
+      "source": "endocrine-interaction",
+      "page": 1,
+      "slide_sha256": "38ae40dbb5a3de669b2d6e9153b6d4ff64f581e16204a6c551ccede13fc25bed",
+      "intent": "hypothesis_branches",
+      "structure": "从一个待验证问题分为两组假设，上支两项、下支三项。连线表达归属，不表达已证实的因果。",
+      "include": [
+        "3",
+        "4",
+        "5",
+        "19",
+        "9",
+        "11",
+        "12",
+        "24",
+        "25",
+        "20",
+        "62",
+        "58",
+        "23",
+        "16",
+        "13",
+        "15",
+        "17",
+        "26",
+        "27"
+      ],
+      "omit": [],
+      "box": [
+        1.45,
+        5.57,
+        31.02,
+        10.1
+      ],
+      "slots": {
+        "58": {
+          "style": "white_label",
+          "role": "label",
+          "field": "lead",
+          "max_lines": 2
+        },
+        "23": {
+          "style": "label",
+          "role": "label",
+          "field": "items.0.title",
+          "max_lines": 1
+        },
+        "16": {
+          "style": "label",
+          "role": "label",
+          "field": "items.1.title",
+          "max_lines": 1
+        },
+        "13": {
+          "style": "left_body",
+          "role": "body",
+          "field": "items.0.steps.0",
+          "max_lines": 1
+        },
+        "15": {
+          "style": "left_body",
+          "role": "body",
+          "field": "items.0.steps.1",
+          "max_lines": 1
+        },
+        "17": {
+          "style": "left_body",
+          "role": "body",
+          "field": "items.1.steps.0",
+          "max_lines": 1
+        },
+        "26": {
+          "style": "left_body",
+          "role": "body",
+          "field": "items.1.steps.1",
+          "max_lines": 1
+        },
+        "27": {
+          "style": "left_body",
+          "role": "body",
+          "field": "items.1.steps.2",
+          "max_lines": 1
+        }
+      },
+      "palette": {
+        "58": {
+          "box_cm": [
+            1.45,
+            9.21,
+            7.13,
+            2.48
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "23": {
+          "box_cm": [
+            10.58,
+            6.9,
+            7.65,
+            1.4
+          ],
+          "fill": "mid",
+          "line": "outline",
+          "flat": true
+        },
+        "16": {
+          "box_cm": [
+            10.58,
+            12.22,
+            7.65,
+            1.4
+          ],
+          "fill": "mid",
+          "line": "outline",
+          "flat": true
+        },
+        "13": {
+          "box_cm": [
+            19.19,
+            5.57,
+            13.28,
+            1.4
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "15": {
+          "box_cm": [
+            19.19,
+            8.37,
+            13.28,
+            1.4
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "17": {
+          "box_cm": [
+            19.19,
+            10.17,
+            13.28,
+            1.4
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "26": {
+          "box_cm": [
+            19.19,
+            12.22,
+            13.28,
+            1.4
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "27": {
+          "box_cm": [
+            19.19,
+            14.27,
+            13.28,
+            1.4
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "3": {
+          "points_cm": [
+            8.58,
+            10.45,
+            9.55,
+            10.45
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "4": {
+          "points_cm": [
+            9.55,
+            7.6,
+            9.55,
+            12.92
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "5": {
+          "points_cm": [
+            9.55,
+            7.6,
+            10.58,
+            7.6
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "19": {
+          "points_cm": [
+            9.55,
+            12.92,
+            10.58,
+            12.92
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "9": {
+          "points_cm": [
+            18.23,
+            6.27,
+            18.23,
+            9.07
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "11": {
+          "points_cm": [
+            18.23,
+            6.27,
+            19.19,
+            6.27
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "12": {
+          "points_cm": [
+            18.23,
+            9.07,
+            19.19,
+            9.07
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "24": {
+          "points_cm": [
+            18.23,
+            10.87,
+            18.23,
+            14.97
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "25": {
+          "points_cm": [
+            18.23,
+            10.87,
+            19.19,
+            10.87
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "20": {
+          "points_cm": [
+            18.23,
+            14.97,
+            19.19,
+            14.97
+          ],
+          "line": "gray",
+          "flat": true
+        },
+        "62": {
+          "points_cm": [
+            18.23,
+            12.92,
+            19.19,
+            12.92
+          ],
+          "line": "gray",
+          "flat": true
+        }
+      },
+      "item_count": 2
+    },
+    {
+      "id": "immunity-radial-validation",
+      "source": "immunity-defense",
+      "page": 1,
+      "slide_sha256": "5ba3d83191f96d1299366e8259d150112ce48bf65d89ffc7d41acf75151f2df1",
+      "intent": "convergent_validation",
+      "structure": "左侧共用输入，三条独立验证轨上下排列，底部给出共同终点。",
+      "include": [
+        "38",
+        "2"
+      ],
+      "box": [
+        1.18,
+        5.05,
+        31.48,
+        10.85
+      ],
+      "slots": {
+        "26": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 2,
+          "field": "lead"
+        },
+        "23": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "1"
+        },
+        "25": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "2"
+        },
+        "24": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "3"
+        },
+        "30": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title"
+        },
+        "31": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.body"
+        },
+        "8": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title"
+        },
+        "32": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.body"
+        },
+        "5": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title"
+        },
+        "33": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.2.body"
+        },
+        "2": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "outcome"
+        }
+      },
+      "palette": {
+        "18": {
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "23": {
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "25": {
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "24": {
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "20": {
+          "fill": "none",
+          "line": "outline",
+          "flat": true
+        },
+        "21": {
+          "fill": "none",
+          "line": "outline",
+          "flat": true
+        },
+        "22": {
+          "fill": "none",
+          "line": "outline",
+          "flat": true
+        },
+        "30": {
+          "box_cm": [
+            9.65,
+            5.25,
+            21.6,
+            0.94
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "31": {
+          "box_cm": [
+            9.65,
+            6.21,
+            21.6,
+            1.75
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "8": {
+          "box_cm": [
+            9.65,
+            8.28,
+            21.6,
+            0.94
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "32": {
+          "box_cm": [
+            9.65,
+            9.239999999999998,
+            21.6,
+            1.75
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "5": {
+          "box_cm": [
+            9.65,
+            11.33,
+            21.6,
+            0.94
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "33": {
+          "box_cm": [
+            9.65,
+            12.29,
+            21.6,
+            1.75
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "2": {
+          "box_cm": [
+            1.02,
+            14.5,
+            31.27,
+            1.45
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        }
+      },
+      "omit": []
+    },
+    {
+      "id": "immunity-four-delivery-rows",
+      "source": "immunity-defense",
+      "page": 2,
+      "slide_sha256": "25ec9f888e42a272bd8088006f4ffa2f5c8454c7323a4cbfd8e58673de367511",
+      "intent": "milestones",
+      "structure": "四条全宽阶段卡，每行并列阶段名、核查任务及可交接产物。",
+      "include": [
+        "137",
+        "126",
+        "151",
+        "160",
+        "161",
+        "174",
+        "175",
+        "184"
+      ],
+      "box": [
+        1.2,
+        4.9,
+        31.46,
+        11.15
+      ],
+      "slots": {
+        "24": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title",
+          "container": "23",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "4": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.0.body",
+          "container": "23",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "126": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.tag",
+          "container": "23",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "153": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title",
+          "container": "152",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "154": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.1.body",
+          "container": "152",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "160": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.tag",
+          "container": "152",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "163": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title",
+          "container": "162",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "166": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.2.body",
+          "container": "162",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "174": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.tag",
+          "container": "162",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "177": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.3.title",
+          "container": "176",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "178": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2,
+          "field": "items.3.body",
+          "container": "176",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "184": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.3.tag",
+          "container": "176",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "palette": {
+        "23": {
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "24": {
+          "box_cm": [
+            3.53,
+            3.47,
+            5.42,
+            2.32
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "4": {
+          "box_cm": [
+            9.35,
+            3.5300000000000002,
+            14.2,
+            2.19
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "126": {
+          "box_cm": [
+            24.15,
+            3.81,
+            5.77,
+            1.62
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "152": {
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "153": {
+          "box_cm": [
+            3.53,
+            6.6499999999999995,
+            5.42,
+            2.32
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "154": {
+          "box_cm": [
+            9.35,
+            6.71,
+            14.2,
+            2.19
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "160": {
+          "box_cm": [
+            24.15,
+            6.99,
+            5.77,
+            1.62
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "162": {
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "163": {
+          "box_cm": [
+            3.53,
+            9.8,
+            5.42,
+            2.32
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "166": {
+          "box_cm": [
+            9.35,
+            9.86,
+            14.2,
+            2.19
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "174": {
+          "box_cm": [
+            24.15,
+            10.14,
+            5.77,
+            1.62
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "176": {
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "177": {
+          "box_cm": [
+            3.53,
+            12.98,
+            5.42,
+            2.32
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "178": {
+          "box_cm": [
+            9.35,
+            13.04,
+            14.2,
+            2.19
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "184": {
+          "box_cm": [
+            24.15,
+            13.32,
+            5.77,
+            1.62
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        }
+      },
+      "item_count": 4,
+      "omit": []
+    },
+    {
+      "id": "zyz-three-validation-cards",
+      "source": "zyz-reference",
+      "page": 1,
+      "slide_sha256": "6781294a182405133a760e6bdb7ee6f5ae0b5873432fd49111ab742d37e6fb8b",
+      "intent": "convergent_validation",
+      "structure": "顶端共同输入，底部共同终点，中间三栏平行证据任务使用同宽蓝白卡。",
+      "include": [
+        "4",
+        "9",
+        "12",
+        "14",
+        "20",
+        "22",
+        "28",
+        "30",
+        "36",
+        "38",
+        "40",
+        "42",
+        "44"
+      ],
+      "box": [
+        1.18,
+        5.04,
+        31.48,
+        11.15
+      ],
+      "slots": {
+        "9": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "lead"
+        },
+        "44": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "outcome"
+        },
+        "14": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title",
+          "container": "12",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "36": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.0.body",
+          "container": "12",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "22": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title",
+          "container": "20",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "40": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.1.body",
+          "container": "20",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "30": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title",
+          "container": "28",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "42": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.2.body",
+          "container": "28",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "palette": {
+        "4": {
+          "box_cm": [
+            2.16,
+            5.29,
+            29.49,
+            0.64
+          ],
+          "fill": "mid",
+          "line": "none",
+          "flat": true
+        },
+        "9": {
+          "box_cm": [
+            1.65,
+            3.92,
+            30.54,
+            1.25
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "38": {
+          "box_cm": [
+            2.16,
+            14.4,
+            29.49,
+            0.55
+          ],
+          "fill": "mid",
+          "line": "none",
+          "flat": true
+        },
+        "44": {
+          "box_cm": [
+            1.65,
+            15.01,
+            30.54,
+            1.31
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "12": {
+          "box_cm": [
+            1.24,
+            6.25,
+            10.1,
+            7.67
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "14": {
+          "box_cm": [
+            1.58,
+            6.55,
+            9.42,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "36": {
+          "box_cm": [
+            1.69,
+            8.1,
+            9.2,
+            4.94
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "20": {
+          "box_cm": [
+            12.13,
+            6.25,
+            10.1,
+            7.67
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "22": {
+          "box_cm": [
+            12.47,
+            6.55,
+            9.42,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "40": {
+          "box_cm": [
+            12.58,
+            8.1,
+            9.2,
+            4.94
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "28": {
+          "box_cm": [
+            23.01,
+            6.25,
+            10.1,
+            7.67
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "30": {
+          "box_cm": [
+            23.35,
+            6.55,
+            9.42,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "42": {
+          "box_cm": [
+            23.46,
+            8.1,
+            9.2,
+            4.94
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        }
+      },
+      "item_count": 3,
+      "omit": []
+    },
+    {
+      "id": "zyz-four-numbered-checkpoints",
+      "source": "zyz-reference",
+      "page": 2,
+      "slide_sha256": "655b7f7d8e4be0ea2f324441fd55b2a2410a14bc8404343c8927ef5e38d4a263",
+      "intent": "milestones",
+      "structure": "横向四张等宽编号卡，每卡依次示出阶段、任务和可交接产物。",
+      "include": [
+        "32",
+        "34",
+        "35",
+        "79",
+        "81",
+        "82",
+        "83",
+        "85",
+        "86",
+        "87",
+        "89",
+        "90",
+        "93",
+        "94",
+        "95",
+        "109",
+        "111",
+        "112",
+        "113",
+        "115",
+        "116",
+        "117",
+        "119",
+        "120"
+      ],
+      "box": [
+        1.18,
+        5.05,
+        31.48,
+        11.12
+      ],
+      "slots": {
+        "35": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "01",
+          "container": "34",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "93": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title",
+          "container": "32",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "95": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.0.body",
+          "container": "32",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "94": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.tag",
+          "container": "32",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "82": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "02",
+          "container": "81",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "111": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title",
+          "container": "79",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "112": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.1.body",
+          "container": "79",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "109": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.tag",
+          "container": "79",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "86": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "03",
+          "container": "85",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "115": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title",
+          "container": "83",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "116": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.2.body",
+          "container": "83",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "113": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.tag",
+          "container": "83",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "90": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "04",
+          "container": "89",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "119": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.3.title",
+          "container": "87",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "120": {
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "field": "items.3.body",
+          "container": "87",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "117": {
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.3.tag",
+          "container": "87",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "palette": {
+        "32": {
+          "box_cm": [
+            1.22,
+            6.53,
+            7.51,
+            9.64
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "34": {
+          "box_cm": [
+            4.1,
+            5.16,
+            1.75,
+            1.75
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "35": {
+          "box_cm": [
+            4.13,
+            5.43,
+            1.69,
+            1.08
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "93": {
+          "box_cm": [
+            1.53,
+            7.26,
+            6.89,
+            1.23
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "95": {
+          "box_cm": [
+            1.62,
+            9.04,
+            6.71,
+            3.25
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "94": {
+          "box_cm": [
+            1.53,
+            13.6,
+            6.89,
+            1.8
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "79": {
+          "box_cm": [
+            9.22,
+            6.53,
+            7.51,
+            9.64
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "81": {
+          "box_cm": [
+            12.100000000000001,
+            5.16,
+            1.75,
+            1.75
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "82": {
+          "box_cm": [
+            12.13,
+            5.43,
+            1.69,
+            1.08
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "111": {
+          "box_cm": [
+            9.530000000000001,
+            7.26,
+            6.89,
+            1.23
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "112": {
+          "box_cm": [
+            9.620000000000001,
+            9.04,
+            6.71,
+            3.25
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "109": {
+          "box_cm": [
+            9.530000000000001,
+            13.6,
+            6.89,
+            1.8
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "83": {
+          "box_cm": [
+            17.22,
+            6.53,
+            7.51,
+            9.64
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "85": {
+          "box_cm": [
+            20.099999999999998,
+            5.16,
+            1.75,
+            1.75
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "86": {
+          "box_cm": [
+            20.13,
+            5.43,
+            1.69,
+            1.08
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "115": {
+          "box_cm": [
+            17.529999999999998,
+            7.26,
+            6.89,
+            1.23
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "116": {
+          "box_cm": [
+            17.619999999999997,
+            9.04,
+            6.71,
+            3.25
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "113": {
+          "box_cm": [
+            17.529999999999998,
+            13.6,
+            6.89,
+            1.8
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "87": {
+          "box_cm": [
+            25.22,
+            6.53,
+            7.51,
+            9.64
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "89": {
+          "box_cm": [
+            28.099999999999998,
+            5.16,
+            1.75,
+            1.75
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "90": {
+          "box_cm": [
+            28.13,
+            5.43,
+            1.69,
+            1.08
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "119": {
+          "box_cm": [
+            25.529999999999998,
+            7.26,
+            6.89,
+            1.23
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "120": {
+          "box_cm": [
+            25.619999999999997,
+            9.04,
+            6.71,
+            3.25
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "117": {
+          "box_cm": [
+            25.529999999999998,
+            13.6,
+            6.89,
+            1.8
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        }
+      },
+      "item_count": 4,
+      "omit": []
+    },
+    {
+      "id": "morning-numbered-evidence-rows",
+      "source": "morning-closing",
+      "page": 1,
+      "slide_sha256": "2ebf6dff76527fc3ba20c420ff6f0b4b21aa537cd9c635f960b8297d16ab568a",
+      "intent": "parallel_cards",
+      "structure": "三条带圆形编号的原生证据行，使用浅蓝容器和细蓝分隔。",
+      "include": [
+        "161",
+        "205",
+        "208",
+        "212",
+        "235",
+        "219",
+        "221",
+        "223",
+        "237",
+        "227",
+        "229",
+        "231",
+        "239",
+        "241",
+        "242"
+      ],
+      "box": [
+        2.05,
+        5.52,
+        29.74,
+        10.4
+      ],
+      "slots": {
+        "205": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "1",
+          "container": "161",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "208": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.0.title",
+          "container": "161",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "212": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 1,
+          "field": "items.0.body",
+          "container": "161",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "219": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "2",
+          "container": "235",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "221": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.1.title",
+          "container": "235",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "223": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 1,
+          "field": "items.1.body",
+          "container": "235",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "227": {
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "literal": "3",
+          "container": "237",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "229": {
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "field": "items.2.title",
+          "container": "237",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        },
+        "231": {
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 1,
+          "field": "items.2.body",
+          "container": "237",
+          "inset_pt": [
+            1,
+            1,
+            1,
+            1
+          ]
+        }
+      },
+      "palette": {
+        "161": {
+          "box_cm": [
+            2.05,
+            5.52,
+            29.74,
+            3.28
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "205": {
+          "box_cm": [
+            2.45,
+            5.85,
+            1.03,
+            1.03
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "208": {
+          "box_cm": [
+            3.78,
+            5.779999999999999,
+            27.25,
+            1.2
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "212": {
+          "box_cm": [
+            3.78,
+            7.34,
+            27.29,
+            1.22
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "239": {
+          "line": "outline",
+          "flat": true,
+          "points_cm": [
+            3.8,
+            7.09,
+            30.98,
+            7.09
+          ]
+        },
+        "235": {
+          "box_cm": [
+            2.05,
+            9.08,
+            29.74,
+            3.28
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "219": {
+          "box_cm": [
+            2.45,
+            9.41,
+            1.03,
+            1.03
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "221": {
+          "box_cm": [
+            3.78,
+            9.34,
+            27.25,
+            1.2
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "223": {
+          "box_cm": [
+            3.78,
+            10.9,
+            27.29,
+            1.22
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "241": {
+          "line": "outline",
+          "flat": true,
+          "points_cm": [
+            3.8,
+            10.65,
+            30.98,
+            10.65
+          ]
+        },
+        "237": {
+          "box_cm": [
+            2.05,
+            12.64,
+            29.74,
+            3.28
+          ],
+          "fill": "pale",
+          "line": "outline",
+          "flat": true
+        },
+        "227": {
+          "box_cm": [
+            2.45,
+            12.97,
+            1.03,
+            1.03
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true
+        },
+        "229": {
+          "box_cm": [
+            3.78,
+            12.9,
+            27.25,
+            1.2
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "231": {
+          "box_cm": [
+            3.78,
+            14.46,
+            27.29,
+            1.22
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "242": {
+          "line": "outline",
+          "flat": true,
+          "points_cm": [
+            3.8,
+            14.21,
+            30.98,
+            14.21
+          ]
+        }
+      },
+      "item_count": 3,
+      "omit": []
+    },
+    {
+      "id": "logic-red-four-stage-cards",
+      "source": "logic-red",
+      "page": 1,
+      "slide_sha256": "06d78359cde9a6df5c2e399dc094249bda71742f0b385d77e529eedb0bc35f32",
+      "intent": "milestones",
+      "item_count": 4,
+      "structure": "四个等宽的阶段卡片，蓝色标题区、可编辑说明以及交付标签。适合研究阶段、干预计划及成果汇报。",
+      "include": [
+        "16",
+        "26",
+        "44",
+        "25",
+        "19",
+        "28",
+        "45",
+        "27",
+        "20",
+        "30",
+        "46",
+        "29",
+        "21",
+        "32",
+        "47",
+        "31"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "26": {
+          "field": "items.0.title",
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16"
+        },
+        "44": {
+          "field": "items.0.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 4,
+          "container": "16"
+        },
+        "25": {
+          "field": "items.0.tag",
+          "style": "cluster_body",
+          "role": "label",
+          "max_lines": 1,
+          "container": "16"
+        },
+        "28": {
+          "field": "items.1.title",
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19"
+        },
+        "45": {
+          "field": "items.1.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 4,
+          "container": "19"
+        },
+        "27": {
+          "field": "items.1.tag",
+          "style": "cluster_body",
+          "role": "label",
+          "max_lines": 1,
+          "container": "19"
+        },
+        "30": {
+          "field": "items.2.title",
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "20"
+        },
+        "46": {
+          "field": "items.2.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 4,
+          "container": "20"
+        },
+        "29": {
+          "field": "items.2.tag",
+          "style": "cluster_body",
+          "role": "label",
+          "max_lines": 1,
+          "container": "20"
+        },
+        "32": {
+          "field": "items.3.title",
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "21"
+        },
+        "47": {
+          "field": "items.3.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 4,
+          "container": "21"
+        },
+        "31": {
+          "field": "items.3.tag",
+          "style": "cluster_body",
+          "role": "label",
+          "max_lines": 1,
+          "container": "21"
+        }
+      },
+      "palette": {
+        "16": {
+          "box_cm": [
+            1.24,
+            5.8,
+            7.47,
+            10.45
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "26": {
+          "box_cm": [
+            1.42,
+            6.13,
+            7.11,
+            1.28
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "44": {
+          "box_cm": [
+            1.72,
+            7.93,
+            6.51,
+            4.78
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "25": {
+          "box_cm": [
+            1.48,
+            13.93,
+            6.99,
+            1.47
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "19": {
+          "box_cm": [
+            9.2,
+            5.8,
+            7.47,
+            10.45
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "28": {
+          "box_cm": [
+            9.379999999999999,
+            6.13,
+            7.11,
+            1.28
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "45": {
+          "box_cm": [
+            9.68,
+            7.93,
+            6.51,
+            4.78
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "27": {
+          "box_cm": [
+            9.44,
+            13.93,
+            6.99,
+            1.47
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "20": {
+          "box_cm": [
+            17.16,
+            5.8,
+            7.47,
+            10.45
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "30": {
+          "box_cm": [
+            17.34,
+            6.13,
+            7.11,
+            1.28
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "46": {
+          "box_cm": [
+            17.64,
+            7.93,
+            6.51,
+            4.78
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "29": {
+          "box_cm": [
+            17.4,
+            13.93,
+            6.99,
+            1.47
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "21": {
+          "box_cm": [
+            25.12,
+            5.8,
+            7.47,
+            10.45
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "32": {
+          "box_cm": [
+            25.3,
+            6.13,
+            7.11,
+            1.28
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "47": {
+          "box_cm": [
+            25.6,
+            7.93,
+            6.51,
+            4.78
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "31": {
+          "box_cm": [
+            25.36,
+            13.93,
+            6.99,
+            1.47
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        }
+      }
+    },
+    {
+      "id": "logic-blue-matched-checkpoints",
+      "source": "logic-blue",
+      "page": 1,
+      "slide_sha256": "39009a6664953c5d5cbedd4774a506600653f291c9d904021a73b1e670a56f07",
+      "intent": "paired_comparison",
+      "item_count": 3,
+      "structure": "三行对齐的双列对照，保留组别蓝条和各行标题。适合比较两组方案、质量指标与计划和实测结果。",
+      "include": [
+        "146",
+        "42",
+        "73",
+        "74",
+        "46",
+        "85",
+        "86",
+        "47",
+        "92",
+        "93",
+        "147",
+        "58",
+        "106",
+        "107",
+        "59",
+        "113",
+        "114",
+        "60",
+        "120",
+        "121"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "146": {
+          "field": "headers.0",
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1
+        },
+        "73": {
+          "field": "items.0.title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "42"
+        },
+        "74": {
+          "field": "items.0.body",
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "42"
+        },
+        "85": {
+          "field": "items.1.title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "46"
+        },
+        "86": {
+          "field": "items.1.body",
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "46"
+        },
+        "92": {
+          "field": "items.2.title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "47"
+        },
+        "93": {
+          "field": "items.2.body",
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "47"
+        },
+        "147": {
+          "field": "headers.1",
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1
+        },
+        "106": {
+          "field": "items.0.right_title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "58"
+        },
+        "107": {
+          "field": "items.0.right_body",
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "58"
+        },
+        "113": {
+          "field": "items.1.right_title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "59"
+        },
+        "114": {
+          "field": "items.1.right_body",
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "59"
+        },
+        "120": {
+          "field": "items.2.right_title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "60"
+        },
+        "121": {
+          "field": "items.2.right_body",
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 1,
+          "container": "60"
+        }
+      },
+      "palette": {
+        "146": {
+          "box_cm": [
+            1.24,
+            5.8,
+            15.34,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true,
+          "upright": true
+        },
+        "42": {
+          "box_cm": [
+            1.24,
+            7.35,
+            15.34,
+            2.8
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "73": {
+          "box_cm": [
+            1.62,
+            7.6,
+            14.6,
+            0.99
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "74": {
+          "box_cm": [
+            1.72,
+            8.78,
+            14.4,
+            1.02
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "46": {
+          "box_cm": [
+            1.24,
+            10.33,
+            15.34,
+            2.8
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "85": {
+          "box_cm": [
+            1.62,
+            10.58,
+            14.6,
+            0.99
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "86": {
+          "box_cm": [
+            1.72,
+            11.76,
+            14.4,
+            1.02
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "47": {
+          "box_cm": [
+            1.24,
+            13.31,
+            15.34,
+            2.8
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "92": {
+          "box_cm": [
+            1.62,
+            13.56,
+            14.6,
+            0.99
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "93": {
+          "box_cm": [
+            1.72,
+            14.74,
+            14.4,
+            1.02
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "147": {
+          "box_cm": [
+            17.25,
+            5.8,
+            15.34,
+            1.22
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true,
+          "upright": true
+        },
+        "58": {
+          "box_cm": [
+            17.25,
+            7.35,
+            15.34,
+            2.8
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "106": {
+          "box_cm": [
+            17.63,
+            7.6,
+            14.6,
+            0.99
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "107": {
+          "box_cm": [
+            17.73,
+            8.78,
+            14.4,
+            1.02
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "59": {
+          "box_cm": [
+            17.25,
+            10.33,
+            15.34,
+            2.8
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "113": {
+          "box_cm": [
+            17.63,
+            10.58,
+            14.6,
+            0.99
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "114": {
+          "box_cm": [
+            17.73,
+            11.76,
+            14.4,
+            1.02
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "60": {
+          "box_cm": [
+            17.25,
+            13.31,
+            15.34,
+            2.8
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "120": {
+          "box_cm": [
+            17.63,
+            13.56,
+            14.6,
+            0.99
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "121": {
+          "box_cm": [
+            17.73,
+            14.74,
+            14.4,
+            1.02
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        }
+      }
+    },
+    {
+      "id": "logic-blue-six-evidence-grid",
+      "source": "logic-blue",
+      "page": 2,
+      "slide_sha256": "aba137604eed274d69d6682ec8fa1eb031e3e940af660a8272ecaaf4d4f1fea2",
+      "intent": "evidence_cluster",
+      "item_count": 6,
+      "structure": "居中研究问题，一组等宽的六张证据卡。每格标题说明证据类型，适合独立证据归纳和质控事项。",
+      "include": [
+        "144",
+        "81",
+        "84",
+        "85",
+        "91",
+        "89",
+        "90",
+        "96",
+        "98",
+        "99",
+        "104",
+        "102",
+        "103",
+        "107",
+        "110",
+        "111",
+        "113",
+        "116",
+        "117"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "144": {
+          "field": "hub",
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1
+        },
+        "84": {
+          "field": "items.0.title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "81"
+        },
+        "85": {
+          "field": "items.0.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "container": "81"
+        },
+        "89": {
+          "field": "items.1.title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "91"
+        },
+        "90": {
+          "field": "items.1.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "container": "91"
+        },
+        "98": {
+          "field": "items.2.title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "96"
+        },
+        "99": {
+          "field": "items.2.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "container": "96"
+        },
+        "102": {
+          "field": "items.3.title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "104"
+        },
+        "103": {
+          "field": "items.3.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "container": "104"
+        },
+        "110": {
+          "field": "items.4.title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "107"
+        },
+        "111": {
+          "field": "items.4.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "container": "107"
+        },
+        "116": {
+          "field": "items.5.title",
+          "style": "label",
+          "role": "label",
+          "max_lines": 1,
+          "container": "113"
+        },
+        "117": {
+          "field": "items.5.body",
+          "style": "body",
+          "role": "body",
+          "max_lines": 3,
+          "container": "113"
+        }
+      },
+      "palette": {
+        "144": {
+          "box_cm": [
+            1.24,
+            5.8,
+            31.35,
+            1.2
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "81": {
+          "box_cm": [
+            1.24,
+            7.32,
+            10.25,
+            4.3
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true,
+          "upright": true
+        },
+        "84": {
+          "box_cm": [
+            1.48,
+            7.550000000000001,
+            9.77,
+            1.04
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "85": {
+          "box_cm": [
+            1.62,
+            8.84,
+            9.49,
+            2.52
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "91": {
+          "box_cm": [
+            11.79,
+            7.32,
+            10.25,
+            4.3
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true,
+          "upright": true
+        },
+        "89": {
+          "box_cm": [
+            12.03,
+            7.550000000000001,
+            9.77,
+            1.04
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "90": {
+          "box_cm": [
+            12.17,
+            8.84,
+            9.49,
+            2.52
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "96": {
+          "box_cm": [
+            22.34,
+            7.32,
+            10.25,
+            4.3
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true,
+          "upright": true
+        },
+        "98": {
+          "box_cm": [
+            22.58,
+            7.550000000000001,
+            9.77,
+            1.04
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "99": {
+          "box_cm": [
+            22.72,
+            8.84,
+            9.49,
+            2.52
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "104": {
+          "box_cm": [
+            1.24,
+            11.95,
+            10.25,
+            4.3
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true,
+          "upright": true
+        },
+        "102": {
+          "box_cm": [
+            1.48,
+            12.18,
+            9.77,
+            1.04
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "103": {
+          "box_cm": [
+            1.62,
+            13.469999999999999,
+            9.49,
+            2.52
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "107": {
+          "box_cm": [
+            11.79,
+            11.95,
+            10.25,
+            4.3
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true,
+          "upright": true
+        },
+        "110": {
+          "box_cm": [
+            12.03,
+            12.18,
+            9.77,
+            1.04
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "111": {
+          "box_cm": [
+            12.17,
+            13.469999999999999,
+            9.49,
+            2.52
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "113": {
+          "box_cm": [
+            22.34,
+            11.95,
+            10.25,
+            4.3
+          ],
+          "fill": "white",
+          "line": "outline",
+          "flat": true,
+          "upright": true
+        },
+        "116": {
+          "box_cm": [
+            22.58,
+            12.18,
+            9.77,
+            1.04
+          ],
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "117": {
+          "box_cm": [
+            22.72,
+            13.469999999999999,
+            9.49,
+            2.52
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        }
+      }
+    },
+    {
+      "id": "logic-blue-convergent-funnel",
+      "source": "logic-blue",
+      "page": 3,
+      "slide_sha256": "6d46ec63a2e87b3d98121d6fda2f23d54f118c77adc33396642dc9f8420fbeb6",
+      "intent": "convergent_validation",
+      "item_count": 3,
+      "structure": "三个错层验证模块沿浅蓝汇聚区收束至共同终点。适合三种方法验证同一预设目标。",
+      "include": [
+        "188",
+        "196",
+        "258",
+        "252",
+        "4",
+        "271",
+        "16",
+        "253",
+        "17"
+      ],
+      "omit": [],
+      "box": [
+        1.24,
+        5.8,
+        31.35,
+        10.45
+      ],
+      "slots": {
+        "196": {
+          "field": "lead",
+          "style": "heading",
+          "role": "label",
+          "max_lines": 1
+        },
+        "258": {
+          "field": "outcome",
+          "style": "white_label",
+          "role": "label",
+          "max_lines": 1
+        },
+        "249": {
+          "field": "items.0.title",
+          "style": "white_label",
+          "max_lines": 1,
+          "role": "label"
+        },
+        "4": {
+          "field": "items.0.body",
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2
+        },
+        "263": {
+          "field": "items.1.title",
+          "style": "white_label",
+          "max_lines": 1,
+          "role": "label"
+        },
+        "16": {
+          "field": "items.1.body",
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2
+        },
+        "255": {
+          "field": "items.2.title",
+          "style": "white_label",
+          "max_lines": 1,
+          "role": "label"
+        },
+        "17": {
+          "field": "items.2.body",
+          "style": "left_body",
+          "role": "body",
+          "max_lines": 2
+        }
+      },
+      "palette": {
+        "188": {
+          "box_cm": [
+            1.24,
+            6.7,
+            31.35,
+            8.82
+          ]
+        },
+        "138": {
+          "fill": "mid",
+          "line": "none",
+          "flat": true
+        },
+        "142": {
+          "fill": "pale",
+          "line": "none",
+          "flat": true
+        },
+        "140": {
+          "fill": "mid",
+          "line": "none",
+          "flat": true
+        },
+        "196": {
+          "box_cm": [
+            9.24,
+            5.8,
+            15.35,
+            1.26
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true,
+          "upright": true
+        },
+        "258": {
+          "box_cm": [
+            8.74,
+            14.98,
+            16.35,
+            1.27
+          ],
+          "fill": "navy",
+          "line": "none",
+          "flat": true,
+          "upright": true
+        },
+        "252": {
+          "box_cm": [
+            1.6,
+            8.66,
+            9.4,
+            4.55
+          ]
+        },
+        "246": {
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "249": {
+          "box_cm": [
+            2.46,
+            8.35,
+            6.3,
+            1.93
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "4": {
+          "box_cm": [
+            2.0,
+            10.72,
+            8.6,
+            1.85
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "271": {
+          "box_cm": [
+            12.24,
+            7.42,
+            9.35,
+            4.55
+          ]
+        },
+        "270": {
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "263": {
+          "box_cm": [
+            14.5,
+            4.9,
+            4.85,
+            1.2
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "16": {
+          "box_cm": [
+            12.64,
+            9.5,
+            8.55,
+            1.85
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        },
+        "253": {
+          "box_cm": [
+            22.86,
+            8.66,
+            9.4,
+            4.55
+          ]
+        },
+        "254": {
+          "fill": "white",
+          "line": "outline",
+          "flat": true
+        },
+        "255": {
+          "box_cm": [
+            25.13,
+            8.35,
+            6.3,
+            1.93
+          ],
+          "fill": "blue",
+          "line": "none",
+          "flat": true
+        },
+        "17": {
+          "box_cm": [
+            23.26,
+            10.72,
+            8.6,
+            1.85
+          ],
+          "fill": "none",
+          "line": "none",
+          "flat": true
+        }
+      }
+    }
+  ]
+}

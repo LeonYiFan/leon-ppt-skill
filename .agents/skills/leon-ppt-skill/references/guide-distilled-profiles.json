@@ -1926,6 +1926,875 @@
           3.45
         ]
       }
+    },
+    {
+      "id": "guide-two-gaps-and-evidence",
+      "source": "guide",
+      "page": 5,
+      "slide_sha256": "7bcbe52ab638a79931a50faeb1a7cb7d7e9ca6bd8a18b0608904e2432b4362c1",
+      "intent": "paired_gaps",
+      "title": "2",
+      "summary": "28",
+      "source_box": [
+        1.1,
+        18.1,
+        31.3,
+        0.36
+      ],
+      "artwork": [
+        "27",
+        "5"
+      ],
+      "omit": [
+        "25",
+        "26",
+        "51",
+        "20",
+        "9"
+      ],
+      "geometry": {
+        "5": [
+          0.9,
+          2.72,
+          32.04,
+          1.47
+        ],
+        "36": [
+          1.75,
+          6.11,
+          14.82,
+          9.45
+        ],
+        "49": [
+          17.34,
+          6.11,
+          14.82,
+          9.45
+        ]
+      },
+      "slots": {
+        "12": {
+          "field": "lead",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            2.2,
+            2.81,
+            29.42,
+            1.33
+          ],
+          "fixed_text": true
+        },
+        "31": {
+          "field": "items.0.title",
+          "role": "label",
+          "max_lines": 1
+        },
+        "37": {
+          "field": "items.0.body",
+          "role": "body",
+          "max_lines": 2,
+          "box_cm": [
+            2.65,
+            6.83,
+            13.05,
+            2.58
+          ],
+          "fixed_text": true,
+          "container": "36"
+        },
+        "40": {
+          "field": "figures.0.caption",
+          "role": "caption",
+          "max_lines": 1,
+          "box_cm": [
+            2.65,
+            14.25,
+            13.05,
+            1.23
+          ],
+          "fixed_text": true,
+          "container": "36",
+          "optional": true
+        },
+        "35": {
+          "field": "items.1.title",
+          "role": "label",
+          "max_lines": 1
+        },
+        "50": {
+          "field": "items.1.body",
+          "role": "body",
+          "max_lines": 2,
+          "box_cm": [
+            18.2,
+            6.83,
+            13.05,
+            2.58
+          ],
+          "fixed_text": true,
+          "container": "49"
+        },
+        "57": {
+          "field": "figures.1.caption",
+          "role": "caption",
+          "max_lines": 1,
+          "box_cm": [
+            18.2,
+            14.25,
+            13.05,
+            1.23
+          ],
+          "fixed_text": true,
+          "container": "49",
+          "optional": true
+        }
+      },
+      "figures": [
+        {
+          "id": "38",
+          "box_cm": [
+            2.2,
+            9.56,
+            13.9,
+            4.53
+          ]
+        },
+        {
+          "id": "4",
+          "box_cm": [
+            17.79,
+            9.56,
+            13.9,
+            4.53
+          ]
+        }
+      ],
+      "text_alignments": {
+        "31": "center",
+        "35": "center"
+      },
+      "palette": {
+        "22": {
+          "fill": "blue",
+          "line": "blue"
+        },
+        "33": {
+          "fill": "blue",
+          "line": "blue"
+        }
+      },
+      "text_colors": {
+        "37": "111820",
+        "40": "173467",
+        "50": "111820",
+        "57": "173467"
+      }
+    },
+    {
+      "id": "guide-question-and-three-objectives",
+      "source": "guide",
+      "page": 8,
+      "slide_sha256": "e4e1ef32977ab521752f7d4baa6d3ecb51c081384e770eec54b64d4960219970",
+      "intent": "objective_tracks",
+      "title": "2",
+      "summary": "4",
+      "source_box": [
+        1.1,
+        18.1,
+        31.3,
+        0.36
+      ],
+      "artwork": [
+        "9",
+        "34",
+        "3",
+        "43"
+      ],
+      "omit": [
+        "16"
+      ],
+      "text_alignments": {
+        "42": "center",
+        "47": "center",
+        "51": "center"
+      },
+      "geometry": {
+        "41": [
+          7.58,
+          10.18,
+          6.89,
+          1.36
+        ],
+        "46": [
+          15.8,
+          10.18,
+          6.89,
+          1.36
+        ],
+        "50": [
+          24.22,
+          10.18,
+          6.89,
+          1.36
+        ]
+      },
+      "slots": {
+        "11": {
+          "value": "关键问题",
+          "role": "label",
+          "max_lines": 1,
+          "container": "8",
+          "box_cm": [
+            1.86,
+            3.46,
+            4.37,
+            1.28
+          ],
+          "fixed_text": true
+        },
+        "15": {
+          "value": "任务目标",
+          "role": "label",
+          "max_lines": 1,
+          "container": "13",
+          "box_cm": [
+            1.86,
+            10.42,
+            4.37,
+            1.28
+          ],
+          "fixed_text": true
+        },
+        "27": {
+          "value": "目标 1",
+          "role": "label",
+          "max_lines": 1,
+          "container": "26"
+        },
+        "29": {
+          "value": "目标 2",
+          "role": "label",
+          "max_lines": 1,
+          "container": "28"
+        },
+        "31": {
+          "value": "目标 3",
+          "role": "label",
+          "max_lines": 1,
+          "container": "30"
+        },
+        "19": {
+          "field": "lead",
+          "role": "body",
+          "max_lines": 1,
+          "box_cm": [
+            6.05,
+            3.32,
+            25.7,
+            1.62
+          ],
+          "fixed_text": true,
+          "container": "8"
+        },
+        "38": {
+          "field": "items.0.title",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            7.23,
+            8.79,
+            7.54,
+            1.23
+          ],
+          "fixed_text": true,
+          "container": "13"
+        },
+        "42": {
+          "field": "items.0.tag",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            7.85,
+            10.22,
+            6.35,
+            1.24
+          ],
+          "fixed_text": true,
+          "container": "41"
+        },
+        "35": {
+          "field": "items.0.body",
+          "role": "body",
+          "max_lines": 3,
+          "box_cm": [
+            7.15,
+            11.71,
+            7.76,
+            3.64
+          ],
+          "fixed_text": true,
+          "container": "13"
+        },
+        "45": {
+          "field": "items.1.title",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            15.45,
+            8.79,
+            7.54,
+            1.23
+          ],
+          "fixed_text": true,
+          "container": "13"
+        },
+        "47": {
+          "field": "items.1.tag",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            16.07,
+            10.22,
+            6.35,
+            1.24
+          ],
+          "fixed_text": true,
+          "container": "46"
+        },
+        "32": {
+          "field": "items.1.body",
+          "role": "body",
+          "max_lines": 3,
+          "box_cm": [
+            15.37,
+            11.71,
+            7.76,
+            3.64
+          ],
+          "fixed_text": true,
+          "container": "13"
+        },
+        "49": {
+          "field": "items.2.title",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            23.87,
+            8.79,
+            7.54,
+            1.23
+          ],
+          "fixed_text": true,
+          "container": "13"
+        },
+        "51": {
+          "field": "items.2.tag",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            24.49,
+            10.22,
+            6.35,
+            1.24
+          ],
+          "fixed_text": true,
+          "container": "50"
+        },
+        "52": {
+          "field": "items.2.body",
+          "role": "body",
+          "max_lines": 3,
+          "box_cm": [
+            23.79,
+            11.71,
+            7.76,
+            3.64
+          ],
+          "fixed_text": true,
+          "container": "13"
+        }
+      },
+      "figures": [],
+      "text_colors": {
+        "19": "173467",
+        "32": "111820",
+        "35": "111820",
+        "52": "111820"
+      }
+    },
+    {
+      "id": "guide-three-evidence-to-question",
+      "source": "guide",
+      "page": 10,
+      "slide_sha256": "7ac7bbff4a79f49d3b32ae603397cf885af1588badbe8a6f28e83ec487b0974a",
+      "intent": "evidence_to_question",
+      "title": "2",
+      "source_box": [
+        1.1,
+        18.1,
+        31.3,
+        0.36
+      ],
+      "artwork": [],
+      "omit": [
+        "16",
+        "3",
+        "15",
+        "6",
+        "14",
+        "35",
+        "40",
+        "41"
+      ],
+      "geometry": {
+        "18": [
+          1.25,
+          3.25,
+          31.37,
+          8.05
+        ],
+        "23": [
+          1.72,
+          3.65,
+          9.69,
+          7.2
+        ],
+        "25": [
+          12.09,
+          3.65,
+          9.69,
+          7.2
+        ],
+        "24": [
+          22.46,
+          3.65,
+          9.69,
+          7.2
+        ],
+        "37": [
+          1.5,
+          14.22,
+          30.8,
+          1.87
+        ],
+        "38": [
+          3.4,
+          14.33,
+          6.2,
+          1.57
+        ]
+      },
+      "slots": {
+        "38": {
+          "value": "研究问题",
+          "role": "label",
+          "max_lines": 1
+        },
+        "8": {
+          "field": "lead",
+          "role": "body",
+          "max_lines": 1,
+          "box_cm": [
+            1.65,
+            11.95,
+            30.57,
+            1.4
+          ],
+          "fixed_text": true
+        },
+        "39": {
+          "field": "outcome",
+          "role": "body",
+          "max_lines": 1,
+          "box_cm": [
+            9.6,
+            14.4,
+            21.9,
+            1.42
+          ],
+          "fixed_text": true
+        },
+        "9": {
+          "field": "figures.0.caption",
+          "role": "caption",
+          "max_lines": 1,
+          "box_cm": [
+            2.0,
+            9.52,
+            9.13,
+            1.07
+          ],
+          "fixed_text": true,
+          "container": "23"
+        },
+        "32": {
+          "field": "figures.1.caption",
+          "role": "caption",
+          "max_lines": 1,
+          "box_cm": [
+            12.37,
+            9.52,
+            9.13,
+            1.07
+          ],
+          "fixed_text": true,
+          "container": "25"
+        },
+        "7": {
+          "field": "figures.2.caption",
+          "role": "caption",
+          "max_lines": 1,
+          "box_cm": [
+            22.74,
+            9.52,
+            9.13,
+            1.07
+          ],
+          "fixed_text": true,
+          "container": "24"
+        }
+      },
+      "figures": [
+        {
+          "id": "27",
+          "box_cm": [
+            1.95,
+            4.0,
+            9.23,
+            5.23
+          ]
+        },
+        {
+          "id": "13",
+          "box_cm": [
+            12.32,
+            4.0,
+            9.23,
+            5.23
+          ]
+        },
+        {
+          "id": "29",
+          "box_cm": [
+            22.69,
+            4.0,
+            9.23,
+            5.23
+          ]
+        }
+      ],
+      "summary_box": [
+        1.4,
+        16.99,
+        31.07,
+        1.45
+      ],
+      "upright_figures": [
+        "13"
+      ],
+      "text_colors": {
+        "8": "173467",
+        "38": "173467",
+        "39": "111820"
+      }
+    },
+    {
+      "id": "guide-stage-and-two-validation-panels",
+      "source": "guide",
+      "page": 12,
+      "slide_sha256": "81afe616bf7337c045a57877b3aaa661d7ae0db8a8ced2dfaa1bb2ffe908beae",
+      "intent": "staged_design",
+      "title": "6",
+      "summary": "10",
+      "source_box": [
+        1.1,
+        18.1,
+        31.3,
+        0.36
+      ],
+      "artwork": [
+        "9"
+      ],
+      "omit": [
+        "16",
+        "7",
+        "81",
+        "92",
+        "93",
+        "99",
+        "104",
+        "105",
+        "107",
+        "108",
+        "110",
+        "111",
+        "113",
+        "114",
+        "115",
+        "118",
+        "120",
+        "126",
+        "128",
+        "129",
+        "137"
+      ],
+      "geometry": {
+        "12": [
+          1.4,
+          4.26,
+          31.45,
+          3.92
+        ],
+        "101": [
+          10.77,
+          5.3,
+          1.37,
+          1.48
+        ],
+        "102": [
+          21.18,
+          5.3,
+          1.37,
+          1.48
+        ],
+        "29": [
+          1.4,
+          9.65,
+          15.44,
+          6.48
+        ],
+        "31": [
+          1.86,
+          10.97,
+          14.47,
+          4.75
+        ],
+        "89": [
+          17.33,
+          9.65,
+          15.44,
+          6.48
+        ],
+        "90": [
+          17.8,
+          10.97,
+          14.47,
+          4.75
+        ]
+      },
+      "slots": {
+        "8": {
+          "field": "lead",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            2.5,
+            2.53,
+            28.88,
+            1.73
+          ],
+          "fixed_text": true
+        },
+        "17": {
+          "field": "stages.0.title",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            2.0,
+            4.72,
+            8.3,
+            1.18
+          ],
+          "fixed_text": true,
+          "container": "12"
+        },
+        "116": {
+          "field": "stages.0.body",
+          "role": "body",
+          "max_lines": 2,
+          "box_cm": [
+            2.0,
+            6.02,
+            8.3,
+            1.72
+          ],
+          "fixed_text": true,
+          "container": "12"
+        },
+        "103": {
+          "field": "stages.1.title",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            12.77,
+            4.72,
+            8.3,
+            1.18
+          ],
+          "fixed_text": true,
+          "container": "12"
+        },
+        "117": {
+          "field": "stages.1.body",
+          "role": "body",
+          "max_lines": 2,
+          "box_cm": [
+            12.77,
+            6.02,
+            8.3,
+            1.72
+          ],
+          "fixed_text": true,
+          "container": "12"
+        },
+        "106": {
+          "field": "stages.2.title",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            23.44,
+            4.72,
+            8.3,
+            1.18
+          ],
+          "fixed_text": true,
+          "container": "12"
+        },
+        "34": {
+          "field": "stages.2.body",
+          "role": "body",
+          "max_lines": 2,
+          "box_cm": [
+            23.44,
+            6.02,
+            8.3,
+            1.72
+          ],
+          "fixed_text": true,
+          "container": "12"
+        },
+        "133": {
+          "field": "outcome",
+          "role": "body",
+          "max_lines": 1,
+          "box_cm": [
+            1.7,
+            8.24,
+            30.46,
+            1.43
+          ],
+          "fixed_text": true
+        },
+        "36": {
+          "field": "items.0.title",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            2.11,
+            9.79,
+            14.02,
+            1.19
+          ],
+          "fixed_text": true,
+          "container": "29"
+        },
+        "132": {
+          "field": "items.0.body",
+          "role": "body",
+          "max_lines": 2,
+          "box_cm": [
+            10.36,
+            11.87,
+            5.62,
+            2.71
+          ],
+          "fixed_text": true,
+          "container": "31"
+        },
+        "130": {
+          "field": "figures.0.caption",
+          "role": "caption",
+          "max_lines": 1,
+          "box_cm": [
+            2.04,
+            14.74,
+            7.9,
+            0.86
+          ],
+          "fixed_text": true,
+          "container": "31",
+          "optional": true
+        },
+        "135": {
+          "field": "items.1.title",
+          "role": "label",
+          "max_lines": 1,
+          "box_cm": [
+            18.04,
+            9.79,
+            14.02,
+            1.19
+          ],
+          "fixed_text": true,
+          "container": "89"
+        },
+        "131": {
+          "field": "items.1.body",
+          "role": "body",
+          "max_lines": 2,
+          "box_cm": [
+            26.25,
+            11.87,
+            5.62,
+            2.71
+          ],
+          "fixed_text": true,
+          "container": "90"
+        },
+        "127": {
+          "field": "figures.1.caption",
+          "role": "caption",
+          "max_lines": 1,
+          "box_cm": [
+            17.98,
+            14.74,
+            7.9,
+            0.86
+          ],
+          "fixed_text": true,
+          "container": "90",
+          "optional": true
+        }
+      },
+      "figures": [
+        {
+          "id": "119",
+          "box_cm": [
+            2.14,
+            11.03,
+            7.85,
+            3.9
+          ]
+        },
+        {
+          "id": "122",
+          "box_cm": [
+            18.04,
+            11.03,
+            7.85,
+            3.9
+          ]
+        }
+      ],
+      "text_colors": {
+        "34": "111820",
+        "116": "111820",
+        "117": "111820",
+        "131": "111820",
+        "132": "111820",
+        "133": "173467"
+      }
     }
   ]
 }

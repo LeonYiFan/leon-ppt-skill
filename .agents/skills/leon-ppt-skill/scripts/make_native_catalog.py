@@ -1,4 +1,4 @@
-"""Build and search anonymous slot maps for the four local PowerPoint references."""
+"""Build and search local PowerPoint slot maps."""
 
 from __future__ import annotations
 
@@ -112,6 +112,8 @@ def build_catalog(root, output):
                     "shapes": shapes,
                     "materials": material_links[(source, page)],
                 }
+                if "layout_equivalent_to" in row:
+                    record["layout_equivalent_to"] = row["layout_equivalent_to"]
                 stream.write(json.dumps(record, ensure_ascii=False, separators=(",", ":")) + "\n")
                 counts[source] += 1
         os.replace(temporary, output)
@@ -185,19 +187,27 @@ def search(root, input_path, *, source, page, query, limit, slots, assets):
 def suggest(root, input_path, *, source=None, intent=None, figures=None, text_slots=0,
             table=False, min_width=4.0, min_height=2.5, limit=10):
     """List runnable recipes first, then structural candidates for manual review."""
-    from native_distillation import REFERENCES, load_profiles
+    from kw16_component_selection import load_component_profiles
+    from native_distillation import load_profiles
 
     recipes = defaultdict(list)
     for whole, profiles in (
-        (True, load_profiles()),
-        (False, json.loads((REFERENCES / "kw16-distilled-components.json").read_text(encoding="utf-8"))["components"]),
+        (True, load_profiles(root)),
+        (False, load_component_profiles(root)),
     ):
         for row in profiles:
             if intent is None or row["intent"] == intent:
+                slots = row.get("figures", [])
+                fields = {slot["field"] for slot in row.get("slots", {}).values() if "field" in slot}
+                fields.update(f"figures.{i}.caption" for i, slot in enumerate(slots) if slot.get("label"))
+                if row["intent"] == "comparison_table":
+                    fields.add("table.rows")
+                elif row["intent"] == "gantt_schedule":
+                    fields.update({"timeline.periods", "timeline.items[].title",
+                                   "timeline.items[].start", "timeline.items[].end"})
                 recipes[(row["source"], row["page"])].append({
                     "id": row["id"], "intent": row["intent"], "kind": "page" if whole else "component",
-                    "figure_count": len(row.get("figures", [])),
-                    "fields": sorted({slot["field"] for slot in row.get("slots", {}).values() if "field" in slot}),
+                    "figure_count": len(slots), "fields": sorted(fields),
                 })
 
     ranked = []
@@ -208,6 +218,8 @@ def suggest(root, input_path, *, source=None, intent=None, figures=None, text_sl
         known = recipes[(src, page)]
         if figures is not None:
             known = [item for item in known if item["figure_count"] == figures]
+        if source is None and row.get("layout_equivalent_to") and not known:
+            continue
         image_boxes = [
             {"id": shape["id"], "box_cm": shape["box_cm"], "parent": shape["parent"]}
             for shape in row["shapes"]
@@ -226,7 +238,7 @@ def suggest(root, input_path, *, source=None, intent=None, figures=None, text_sl
             continue
         tier = 0 if known else 1
         fit = abs(available_figures - figures) if figures is not None else 0
-        rank = (tier, src not in {"gut", "guide"}, fit, SOURCE_ORDER[src], page)
+        rank = (tier, src not in {"gut", "guide"}, fit, SOURCE_ORDER.get(src, len(SOURCE_ORDER)), page)
         ranked.append((rank, {
             "source": src, "page": page,
             "status": "recipe" if known else "inspect",
@@ -260,7 +272,7 @@ def main():
             cli.add_argument("--output", type=Path, help="default: archive/native-pages.jsonl")
         elif command == "search":
             cli.add_argument("--catalog", type=Path, help="default: archive/native-pages.jsonl")
-            cli.add_argument("--source", choices=SOURCE_ORDER)
+            cli.add_argument("--source", help="素材库清单中的来源别名")
             cli.add_argument("--page", type=int)
             cli.add_argument("--query", default="", help="构图、形状或来源关键词")
             cli.add_argument("--limit", default=12, type=int)
@@ -268,7 +280,7 @@ def main():
             cli.add_argument("--assets", action="store_true", help="列出所选页关联的本地素材")
         else:
             cli.add_argument("--catalog", type=Path, help="default: archive/native-pages.jsonl")
-            cli.add_argument("--source", choices=SOURCE_ORDER)
+            cli.add_argument("--source", help="素材库清单中的来源别名")
             cli.add_argument("--intent", help="查已编译的语义版式，例如 method_evidence")
             cli.add_argument("--figures", type=int, help="图数要求，含可检查的未验证候选")
             cli.add_argument("--text-slots", type=int, default=0, help="最少原生文字槽")

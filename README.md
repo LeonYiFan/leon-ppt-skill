@@ -1,6 +1,6 @@
 # Leon PPT Skill · 文献汇报
 
-用可编辑的蓝白 PowerPoint 模板整理中文学术汇报。分点、图卡和灰底总结条按内容排布，正文图号、页码和出处记录在演讲者备注。生成稿省去徽标、个人姓名、单位和联系方式。
+用可编辑的蓝白 PowerPoint 模板整理中文学术汇报。按图数、比例、分组、指标和阶段选版，适配时可生成 A/B/C 的可编辑预览。正文图号、页码和出处记录在演讲者备注。生成稿省去徽标、个人姓名、单位和联系方式。
 
 [下载可编辑模板](.agents/skills/leon-ppt-skill/assets/template-deck.pptx) · [查看版式规范](.agents/skills/leon-ppt-skill/references/report-guide.md)
 
@@ -22,7 +22,16 @@ python scripts/build_report.py --plan assets/example-plan.json --output ../../..
 python scripts/check_deck.py ../../../output/example.pptx --manifest ../../../output/example.audit.json
 ```
 
-按 [计划格式](.agents/skills/leon-ppt-skill/references/page-plan.md) 填写自己的内容。需要原生选版时，用 `--native-library` 指向已在本机单独配置的素材库。仓库里的匿名空白模板、常规页型及可编辑证据卡可独立使用。原始论文、答辩原稿、私有素材库和本次汇报成品保存在本机。
+在同一目录运行下面的命令，用虚构示例试选版。
+
+```powershell
+python -X utf8 scripts/build_report.py --plan assets/layout-options-example.json --output ../../../output/draft.pptx --manifest ../../../output/draft.audit.json --layout-options 3
+python -X utf8 scripts/build_layout_options.py --plan assets/layout-options-example.json --manifest ../../../output/draft.audit.json --output ../../../output/alternatives.pptx --preview-manifest ../../../output/alternatives.audit.json
+```
+
+按计划格式填写自己的内容。随附的匿名蓝白组件包含 32 种整页布局和 25 种组件。开启 `prefer_native` 后，构建器根据内容选用适配的整页和组件。[计划格式](.agents/skills/leon-ppt-skill/references/page-plan.md) · [A/B/C 用法](.agents/skills/leon-ppt-skill/references/native-library-workflow.md#生成与确认备选)
+
+下载者使用自己的论文和图片。原始 PPT、论文和全量素材库保存在作者本机。按原稿页码和对象 ID 编写的 `native` 或 `native_components` 计划依赖对应的完整本地库，可用 `--native-library` 连接。公开版计划可用 `native_profile` 指定随附的版式。
 
 原有 Node.js 接口仍使用 `scripts/build_report.cjs` 和 [旧版示例](examples/mock-report.json)。
 

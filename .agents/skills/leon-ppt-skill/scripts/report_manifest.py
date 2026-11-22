@@ -3,7 +3,7 @@ from hashlib import file_digest
 from pathlib import Path
 
 from pptx.dml.color import RGBColor
-from pptx.enum.text import MSO_AUTO_SIZE
+from pptx.enum.text import MSO_AUTO_SIZE, PP_ALIGN
 from pptx.oxml.ns import qn
 
 from kw16_component_selection import apply_kw16_palette
@@ -112,9 +112,18 @@ def native_records(slide, order, manifest, record, spec, remap, page_source):
         transform = shapes[remap[source_id]]._element.grpSpPr.xfrm
         transform.chOff.x, transform.chOff.y = transform.off.x, transform.off.y
         transform.chExt.cx, transform.chExt.cy = transform.ext.cx, transform.ext.cy
+    for source_id in order.get("upright_figures", ()) if auto_selected else ():
+        transform = shapes[remap[source_id]]._element.find(f"{qn('p:spPr')}/{qn('a:xfrm')}")
+        for attribute in ("rot", "flipH", "flipV"):
+            transform.attrib.pop(attribute, None)
     for source_id, box in geometry.items():
         shape = shapes[remap[source_id]]
         shape.left, shape.top, shape.width, shape.height = (T.cm(value) for value in box)
+    alignment_values = {"left": PP_ALIGN.LEFT, "center": PP_ALIGN.CENTER, "right": PP_ALIGN.RIGHT}
+    for source_id, alignment in order.get("text_alignments", {}).items():
+        frame = shapes[remap[source_id]].text_frame
+        for paragraph in frame.paragraphs:
+            paragraph.alignment = alignment_values[alignment]
     for source_id, size in text_sizes.items():
         frame = shapes[remap[source_id]].text_frame
         frame.auto_size = MSO_AUTO_SIZE.NONE

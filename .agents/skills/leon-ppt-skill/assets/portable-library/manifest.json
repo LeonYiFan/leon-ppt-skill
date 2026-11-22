@@ -1,0 +1,44 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "pancreas-research"
+    },
+    {
+      "id": "pancreas-center"
+    },
+    {
+      "id": "endocrine-interaction"
+    },
+    {
+      "id": "immunity-defense"
+    },
+    {
+      "id": "zyz-reference"
+    },
+    {
+      "id": "morning-closing"
+    },
+    {
+      "id": "logic-red"
+    },
+    {
+      "id": "logic-blue"
+    },
+    {
+      "id": "clinical-history"
+    },
+    {
+      "id": "kw16-9"
+    },
+    {
+      "id": "kw16"
+    },
+    {
+      "id": "gut"
+    },
+    {
+      "id": "guide"
+    }
+  ]
+}

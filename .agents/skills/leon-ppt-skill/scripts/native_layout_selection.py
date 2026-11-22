@@ -13,7 +13,7 @@ from native_figure_balance import (
     GUT_LEGEND, METRIC_PANELS, PAIRED_READOUTS, SINGLE_PANEL, STACKED_PICTURE,
     balance_metric_panels, balance_panels, body_geometry, coordinates_in_group,
 )
-from kw16_component_selection import SUPPLEMENT_INTENTS, choose_kw16_component
+from kw16_component_selection import SUPPLEMENT_INTENTS, choose_kw16_component, iter_kw16_components
 from native_reference import A, P, CM, NativeLibrary, _node_map, _paragraph_style
 from ppt_template import line_width_pt
 from reusable_components import BODY_BOX
@@ -356,7 +356,7 @@ def _select_profile(page, base_dir, library, profile):
         boxes = {item["id"]: item["box_cm"] for item in
                  library._inspect_nodes(donor.tree, donor, None, (1, 1, 0, 0))}
         nodes = dict(_node_map(donor.tree))
-        text_sizes = {}
+        text_sizes = dict(profile.get("text_sizes", {}))
         added_pictures = []
         normalized_groups = {}
         automatic_boxes = all(isinstance(figure, dict) and "box" not in figure
@@ -403,7 +403,7 @@ def _select_profile(page, base_dir, library, profile):
                     else:
                         break
                 # Close the former source-footer gap without lifting the bar out of the bottom band.
-                summary_shift = min(0, max(15.70, card_bottom + .62) - summary_top)
+                summary_shift = min(0, max(profile.get("summary_floor_cm", 15.70), card_bottom + .62) - summary_top)
                 for sid, (x, y, width, height) in summary_boxes.items():
                     adjusted[sid] = [x, y + summary_shift, width, height]
                 geometry.update(adjusted)
@@ -453,6 +453,13 @@ def _select_profile(page, base_dir, library, profile):
         native["include"] = profile["include"]
     detail = dict(source=source, page=number, profile=profile["id"], roles=roles,
                   containers=containers, figures_cm=figures, geometry=geometry, fixed_text=fixed)
+    for option in ("text_alignments", "palette"):
+        if option in profile:
+            detail[option] = profile[option]
+    if upright := profile.get("upright_figures"):
+        if not set(upright) <= images.keys():
+            raise CandidateMismatch("校正方向的槽位需要当前原图")
+        detail["upright_figures"] = upright
     if text_sizes:
         detail["text_sizes"] = text_sizes
     if normalized_groups:
@@ -482,12 +489,29 @@ def _select_profile(page, base_dir, library, profile):
     return score, native, detail
 
 
-def choose_native_layout(page, base_dir, archive_root):
+def _record_options(decision, native_matches, supplement_matches, limit):
+    main = [dict(status="selected", source=detail["source"], page=detail["page"],
+                 profile=detail["profile"], figures_cm=detail["figures_cm"])
+            for _, _, detail in native_matches]
+    supplements = [{key: match[key] for key in ("status", "source", "page", "profile", "structure")}
+                   for _, match in supplement_matches]
+    ranked = main + supplements
+    ordered = ranked[:limit]
+    if limit == 3 and len(ranked) > limit:
+        # Prefer a different reference family for the third option when it fits.
+        families = {entry["source"].removesuffix("-9") for entry in ordered[:2]}
+        ordered[2] = next((entry for entry in ranked[2:]
+                           if entry["source"].removesuffix("-9") not in families), ordered[2])
+    if len(ordered) > 1:
+        decision["options"] = [dict(option, intent=decision["intent"]) for option in ordered]
+
+
+def choose_native_layout(page, base_dir, archive_root, *, option_limit=0):
     """Return the build-ready page and auditable native-selection decision."""
     if "native_auto" not in page:
         return page, None
     intent = page["native_auto"]
-    profiles = load_profiles()
+    profiles = load_profiles(archive_root)
     intents = {profile["intent"] for profile in profiles} | SUPPLEMENT_INTENTS
     if not isinstance(intent, str) or intent not in intents:
         raise ValueError("native_auto 可选 " + "、".join(sorted(intents)))
@@ -522,11 +546,21 @@ def choose_native_layout(page, base_dir, archive_root):
             candidate["figures_cm"] = detail["figures_cm"]
             matches.append((score, native, detail))
         candidates.append(candidate)
+    supplements = []
+    collect = option_limit > 1 and pinned is None
+    if collect and intent in SUPPLEMENT_INTENTS:
+        supplements = list(iter_kw16_components(page, archive_root))
     if not matches:
         if intent in SUPPLEMENT_INTENTS:
-            effective, component = choose_kw16_component(page, archive_root)
+            if collect:
+                effective, component = next(iter(supplements), (page, None))
+            else:
+                effective, component = choose_kw16_component(page, archive_root)
             if component is not None and (pinned is None or component["profile"] == pinned):
                 component["candidates"] = candidates
+                if collect:
+                    component["intent"] = intent
+                    _record_options(component, matches, supplements, option_limit)
                 return effective, component
         if pinned is not None:
             detail = next((row["reason"] for row in candidates), "没找到同一意图下可用的配置")
@@ -540,10 +574,14 @@ def choose_native_layout(page, base_dir, archive_root):
         return _fallback(page, intent, base_dir), dict(status="fallback", intent=intent,
             reason="已核验的原生候选无法完整承载当前内容", candidates=candidates)
 
-    _, native, detail = max(matches, key=lambda entry: entry[0])
+    matches.sort(key=lambda entry: entry[0], reverse=True)
+    _, native, detail = matches[0]
     effective = {k: deepcopy(v) for k, v in page.items()
                  if k not in {"native_auto", "native_profile", "component", "figures", "cards",
                               "strip", "bullets", "figure_legend"}
                  | FORM_FIELDS}
     effective.update(type="native", native=native)
-    return effective, dict(status="selected", intent=intent, candidates=candidates, **detail)
+    decision = dict(status="selected", intent=intent, candidates=candidates, **detail)
+    if collect:
+        _record_options(decision, matches, supplements, option_limit)
+    return effective, decision

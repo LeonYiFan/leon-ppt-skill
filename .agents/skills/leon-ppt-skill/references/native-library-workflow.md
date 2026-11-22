@@ -1,8 +1,27 @@
 # 原生页型和组件
 
-原生选版使用单独保管的本地素材库。将已配置的库路径传给 `build_report.py --native-library`。没有该库时使用随附的空白模板、常规页型和可编辑证据卡。先用 GUT 文献答辩（`gut`）与指南项目答辩（`guide`）建立整稿风格。使用 KW16 合集（`kw16`）与第九套（`kw16-9`）补充细部结构。源页实际页码从 1 起。
+随附的匿名蓝白组件包支持自动选版，包含 32 种整页布局和 25 种组件。公开包中的页码是组件包内的编号，`native_profile` 使用稳定的版式 ID。已有完整本地库时，可用 `--native-library` 指定库路径，按原稿页码查询或复用更多对象。
 
-## 先看真实参考页
+公开包的字段配置位于 `assets/portable-library/profiles/`，其中 `supplemental-layout-profiles.json` 和 `supplemental-components.json` 收录新增的原图配解读、分支假设、并行验证、四阶段交接和组间对照等结构。
+
+## 生成与确认备选
+
+在计划中开启 `"prefer_native": true`，或为某页指定 `native_auto`。从技能目录执行以下命令。A 是自动推荐，容量允许时优先考虑 GUT 和指南的结构。其余备选按内容继续匹配，有几个适配版式就提供几个，最多三种。预览中的 A/B/C 共用当前页的文字、原图和备注。
+
+```powershell
+python -X utf8 scripts/build_report.py --plan plan.json --output draft.pptx --manifest draft.audit.json --layout-options 3
+python -X utf8 scripts/build_layout_options.py --plan plan.json --manifest draft.audit.json --output alternatives.pptx --preview-manifest alternatives.audit.json
+```
+
+用 `--pages 3,5` 限定预览页码。选择后在 `choices.json` 写入原稿页码和选项，例如 `{"3":"B","5":"A"}`，再构建正式稿。没有选择的页继续用自动推荐。
+
+```powershell
+python -X utf8 scripts/build_layout_options.py --plan plan.json --manifest draft.audit.json --choices choices.json --chosen-plan chosen.json
+python -X utf8 scripts/build_report.py --plan chosen.json --output report.pptx --manifest report.audit.json
+python -X utf8 scripts/check_deck.py report.pptx --manifest report.audit.json
+```
+
+## 查找完整本地库中的参考页
 
 根据本次的内容证据决定版式。先找能承担相同信息关系的两份主参考页面，浏览预览，确认主次、形状层级和有效绘图区。比如精简两组图形可先看 GUT 29，原图并排与中央指标看 GUT 41，分轨技术路线看指南 13，风险应对看指南 30。日程或通用并列关系也可查 KW16。选择后记下来源、页码、使用的槽位和未使用的内容。原材料中带回隐私和过往结论的区域留空，当前稿显示本次素材和数据。
 
@@ -13,9 +32,9 @@ python -X utf8 scripts/make_native_catalog.py suggest --intent method_evidence -
 python -X utf8 scripts/make_native_catalog.py suggest --figures 3 --min-width 5.5 --text-slots 4
 ```
 
-上面的命令从技能目录运行。程序返回源 PPTX、预览路径、图层和形状真实 ID、位置以及关联资源。浏览和查找只需技能目录中的素材库，原始位置迁移后仍可选版。所有原始素材均保存在库里，包括母版、布局、图表和相关工作簿、嵌入图片、字体与分组信息。库内的原稿副本和预览仅供本地选版。
+上面的命令从技能目录运行，需要已配置的完整本地库。库在其他位置时提供 `--archive`。程序返回源 PPTX、预览路径、图层和形状真实 ID、位置以及关联资源。库内的原稿副本和预览供本地选版。
 
-`suggest` 对 676 页按图框净尺寸、图数、原生文字量和表格查询。 `recipe` 带已配置的页型或组件 ID 与必需字段。 `inspect` 给可人工核对的候选图框与实际页码，图框可能是装饰或原来图表的位置。先看缩略图与真实槽位，再决定复用。KW16 两套的完全重复预览在候选阶段合并展示。
+`suggest` 按图框净尺寸、图数、原生文字量和表格查询。`recipe` 带已配置的页型或组件 ID 与必需字段。`inspect` 给可人工核对的候选图框与实际页码，图框可能是装饰或原来图表的位置。先看缩略图与真实槽位，再决定复用。KW16 两套的完全重复预览在候选阶段合并展示。
 
 ## 按容量自动选页
 

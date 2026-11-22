@@ -6,7 +6,7 @@
 The plan (see references/page-plan.md) lists the pages in order.  Every page is
 produced by duplicating one archetype page of ``assets/template-deck.pptx`` and
 filling its named shapes, so the result keeps the template's own title bar,
-要点块, 卡片, 灰底总结条, 章节页, 封面与致谢.
+要点块, 卡片, 灰底总结条, 章节页照片, 封面与致谢.
 
 Never overwrites an existing output file.
 """
@@ -14,6 +14,7 @@ from __future__ import annotations
 
 import argparse
 from copy import deepcopy
+from hashlib import sha256
 import io
 import json
 from math import isfinite
@@ -43,7 +44,10 @@ ARCHETYPES = {'cover': 0, 'agenda': 1, 'divider': 2, 'bullets': 3,
 
 DEFAULT_TEMPLATE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
                                 'assets', 'template-deck.pptx')
-DEFAULT_NATIVE_LIBRARY = Path(__file__).resolve().parents[1] / 'assets' / 'native-library'
+ASSETS = Path(__file__).resolve().parents[1] / 'assets'
+DEFAULT_NATIVE_LIBRARY = ASSETS / 'native-library'
+if not DEFAULT_NATIVE_LIBRARY.is_dir():
+    DEFAULT_NATIVE_LIBRARY = ASSETS / 'portable-library'
 
 COMPONENT_FOR_INTENT = {
     'figure_interpretation': 'gut_detail',
@@ -277,7 +281,10 @@ def build_triple(slide, page, manifest, record):
             T.drop(background)
 
 
-def build(plan, template, output, native_library=DEFAULT_NATIVE_LIBRARY, *, audit_manifest=None):
+def build(plan, template, output, native_library=DEFAULT_NATIVE_LIBRARY, *,
+          audit_manifest=None, layout_options=0):
+    if type(layout_options) is not int or layout_options not in {0, 2, 3}:
+        raise ValueError("layout_options 只能为 0、2 或 3")
     prs = Presentation(template)
     meta = plan.get('meta') or {}
     clean_template(prs, str(meta.get('title_cn') or '学术文献汇报').strip() or '学术文献汇报')
@@ -308,7 +315,8 @@ def build(plan, template, output, native_library=DEFAULT_NATIVE_LIBRARY, *, audi
                     if inferred := infer_intent(page):
                         page = {**page, "native_auto": inferred}
                 if "native_auto" in page:
-                    page, decision = choose_native_layout(page, Path(BASE), Path(native_library))
+                    page, decision = choose_native_layout(
+                        page, Path(BASE), Path(native_library), option_limit=layout_options)
                     record['selection'] = decision
                 elif FORM_FIELDS & page.keys():
                     raise ValueError("结构化内容需要指定 native_auto 或改用常规组件字段")
@@ -462,19 +470,26 @@ def main():
     ap.add_argument('--template', default=DEFAULT_TEMPLATE)
     ap.add_argument('--native-library', default=DEFAULT_NATIVE_LIBRARY)
     ap.add_argument('--manifest', type=Path, help='write the local-only delivery and text-fit checks')
+    ap.add_argument('--layout-options', type=int, choices=(2, 3), default=0,
+                    help='record up to this many compatible layouts per unpinned page')
     args = ap.parse_args()
+    if args.layout_options and args.manifest is None:
+        ap.error('--layout-options requires --manifest')
     if os.path.exists(args.output):
         sys.exit('refuse to overwrite %s' % args.output)
     if args.manifest is not None and (args.manifest.exists() or args.manifest.resolve() == Path(args.output).resolve()):
         sys.exit('the manifest must be a new file, separate from the PPTX')
     if args.manifest is not None and not args.manifest.parent.is_dir():
         sys.exit('the manifest directory does not exist')
-    with io.open(args.plan, encoding='utf-8') as fh:
-        plan = json.load(fh)
+    plan_bytes = Path(args.plan).read_bytes()
+    plan = json.loads(plan_bytes.decode("utf-8"))
     global BASE
     BASE = os.path.dirname(os.path.abspath(args.plan))
     manifest = {}
-    count = build(plan, args.template, args.output, args.native_library, audit_manifest=manifest)
+    count = build(plan, args.template, args.output, args.native_library,
+                  audit_manifest=manifest, layout_options=args.layout_options)
+    if args.layout_options:
+        manifest['plan_sha256'] = sha256(plan_bytes).hexdigest()
     if args.manifest is not None:
         with args.manifest.open('x', encoding='utf-8') as file:
             json.dump(manifest, file, ensure_ascii=False, indent=2)
