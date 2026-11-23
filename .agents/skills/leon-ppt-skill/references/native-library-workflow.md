@@ -1,6 +1,6 @@
 # 原生页型和组件
 
-随附的匿名蓝白组件包支持自动选版，包含 32 种整页布局和 25 种组件。公开包中的页码是组件包内的编号，`native_profile` 使用稳定的版式 ID。已有完整本地库时，可用 `--native-library` 指定库路径，按原稿页码查询或复用更多对象。
+随附的匿名蓝白组件包支持自动选版，包含 32 种整页布局和 25 种组件。公开和本机使用同一份匿名目录和自动选版配置。`native_profile` 使用稳定的版式 ID。已有完整本地库时，可用 `--native-library` 指定库路径，按原稿页码复用更多对象。
 
 公开包的字段配置位于 `assets/portable-library/profiles/`，其中 `supplemental-layout-profiles.json` 和 `supplemental-components.json` 收录新增的原图配解读、分支假设、并行验证、四阶段交接和组间对照等结构。
 
@@ -21,15 +21,28 @@ python -X utf8 scripts/build_report.py --plan chosen.json --output report.pptx -
 python -X utf8 scripts/check_deck.py report.pptx --manifest report.audit.json
 ```
 
+## 搜索并填充匿名版式
+
+从技能目录运行以下命令。先核对构图和图幅要求，再把上一条查询返回的匿名来源别名和页码填进第二条命令。
+
+```powershell
+python -X utf8 scripts/make_native_catalog.py suggest --intent figure_evidence --figures 2 --min-width 7 --text-slots 3
+python -X utf8 scripts/make_native_catalog.py search --source catalog-gut --page 1 --slots
+python -X utf8 scripts/make_native_catalog.py suggest --table --text-slots 3
+```
+
+`recipe` 表示有已配置的自动选版字段。`inspect` 是重建后可填充的版式，需核实图幅、文字量和对象关系。用返回的 `source`、`page` 和槽位 ID 绑定 `native.text`、`native.tables`、`native.images`。局部复用时在 `native_components.include` 写实际需要的对象 ID。匿名编号与原稿页码独立。
+
+目录中的图位只说明尺寸和位置。正式稿从本次材料加载原图，将来源写入备注。空图位由构建器跳过。表格用原生单元格，原稿数据与讲稿保留在本地。图文或阶段标签是搜索线索，交付前按当次材料核对。
+
 ## 查找完整本地库中的参考页
 
 根据本次的内容证据决定版式。先找能承担相同信息关系的两份主参考页面，浏览预览，确认主次、形状层级和有效绘图区。比如精简两组图形可先看 GUT 29，原图并排与中央指标看 GUT 41，分轨技术路线看指南 13，风险应对看指南 30。日程或通用并列关系也可查 KW16。选择后记下来源、页码、使用的槽位和未使用的内容。原材料中带回隐私和过往结论的区域留空，当前稿显示本次素材和数据。
 
 ```powershell
-python -X utf8 scripts/make_native_catalog.py search --query 分轨 --limit 6
-python -X utf8 scripts/make_native_catalog.py search --source gut --page 29 --slots --assets
-python -X utf8 scripts/make_native_catalog.py suggest --intent method_evidence --figures 2
-python -X utf8 scripts/make_native_catalog.py suggest --figures 3 --min-width 5.5 --text-slots 4
+python -X utf8 scripts/make_native_catalog.py search --archive assets/native-library --query 分轨 --limit 6
+python -X utf8 scripts/make_native_catalog.py search --archive assets/native-library --source gut --page 29 --slots --assets
+python -X utf8 scripts/make_native_catalog.py suggest --archive assets/native-library --intent method_evidence --figures 2
 ```
 
 上面的命令从技能目录运行，需要已配置的完整本地库。库在其他位置时提供 `--archive`。程序返回源 PPTX、预览路径、图层和形状真实 ID、位置以及关联资源。库内的原稿副本和预览供本地选版。

@@ -14,7 +14,7 @@ description: "用蓝白学术汇报模板把文献或课题做成中文、可编
 | `assets/template-deck.pptx` | 8 个页型原型（空白化、形状已命名） | 构建入口。`scripts/build_report.py` 从这 8 页克隆出新页，所以新页天生带着模板的标题、要点块、总结条、卡片 |
 | `assets/example-plan.json` | 12 页可跑的完整 plan（封面→致谢，八种页型都用上） | 写 plan 时照着改；它就是这套模板的密度与语气样本 |
 | `assets/component-example.json` | 可跑的组件示例 | 展示八种可编辑结构及填充方式。示例内容为演示数据 |
-| `assets/portable-library/` | 匿名蓝白整页原型和原生组件 | 随技能安装，支持按内容匹配和 A/B/C 预览 |
+| `assets/portable-library/` | 匿名蓝白整页原型、原生组件及可搜索版式 | 随技能安装，支持按内容匹配、A/B/C 预览和匿名目录对象复用 |
 | 本地原生素材库 | 可选参考 | 已配置的本地库可通过 `--native-library` 连接 |
 | `assets/summary-bar.png` | 灰底总结条底图（已按原页裁好） | 手工补页时直接用；用原型克隆则不需要 |
 
@@ -25,6 +25,7 @@ description: "用蓝白学术汇报模板把文献或课题做成中文、可编
 - 整套的视觉基准采用新版 GUT 文献答辩与指南项目答辩。文献问题、证据和结论优先参考前者，任务拆解、技术路线及计划优先参考后者。布局、相对比例和源页索引见 [两份主参考的版式](references/style-sources.md)。
 - 在 plan 顶层开启 `"prefer_native": true`。证据和三栏页根据实际图幅、字体度量及槽位容量选版。方法配图、双图夹指标、分轨路线等结构按实际信息关系指定 `native_auto`。需要更细的手工原稿查询时连接已配置的本地库。[原生页型和组件](references/native-library-workflow.md)
 - 关键内容页有多个适配版式时，提供 2–3 个可编辑备选。A 使用推荐版，合适时优先选择 GUT 或指南结构。B、C 展示其他适配构图，按需补入 KW16 等组件。按用户选择锁定对应版式并重建。用户要求直接出稿时使用推荐版。[生成与确认备选](references/native-library-workflow.md#生成与确认备选)
+- 已配置版式容量不足或缺少所需构图时，用 `make_native_catalog.py suggest` 按图数、最小图幅、表格及文字槽位找候选。再用 `search --slots` 核实对象位置和容量，用本次文字、图片和数据填充 `native` 或 `native_components`。目录里的示意图位需用本次原图填充。[搜索并填充匿名版式](references/native-library-workflow.md#搜索并填充匿名版式)
 - 分点、图卡和总结条共用清楚的对齐线。原生证据页按实际分点行数抬高或降下图卡，再用原图长宽比决定单卡、并列或上下排。双图和图—指标—图的短分点优先用约 22 pt，图卡在可读范围内略缩，保持同组卡片的顶线、底线和标题齐平。优先收紧卡片空白，原图按原比例放置。组别、样本和读数是并列证据时，填 `evidence_cards` 自动生成浅蓝对照卡。
 - GUT 和指南候选均无法承载时，按需使用 KW16 的四阶段卡片、并列三卡、双侧对照、六支证据归纳或阶段检查矩阵。只把配置过的可编辑几何放入蓝白正文区，文字和数据来自当次材料。[KW16 结构参考](references/kw16-sources.md)
 - `component.intent` 继续提供合适的通用结构。没有可用的整页或原生组件时可按 [自动选版与美化](references/primary-layouts.md) 生成，或沿用平实的原图页。

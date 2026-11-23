@@ -42,12 +42,14 @@ import reusable_components  # noqa: E402
 ARCHETYPES = {'cover': 0, 'agenda': 1, 'divider': 2, 'bullets': 3,
               'table': 4, 'cards2': 5, 'triple': 6, 'thanks': 7}
 
-DEFAULT_TEMPLATE = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))),
-                                'assets', 'template-deck.pptx')
 ASSETS = Path(__file__).resolve().parents[1] / 'assets'
-DEFAULT_NATIVE_LIBRARY = ASSETS / 'native-library'
-if not DEFAULT_NATIVE_LIBRARY.is_dir():
-    DEFAULT_NATIVE_LIBRARY = ASSETS / 'portable-library'
+PORTABLE_LIBRARY = ASSETS / 'portable-library'
+PRIVATE_LIBRARY = ASSETS / 'native-library'
+DEFAULT_NATIVE_LIBRARY = PORTABLE_LIBRARY if PORTABLE_LIBRARY.is_dir() else PRIVATE_LIBRARY
+DEFAULT_TEMPLATE = PORTABLE_LIBRARY / 'template-deck.pptx'
+if not DEFAULT_TEMPLATE.is_file():
+    DEFAULT_TEMPLATE = ASSETS / 'template-deck.pptx'
+DEFAULT_TEMPLATE = str(DEFAULT_TEMPLATE)
 
 COMPONENT_FOR_INTENT = {
     'figure_interpretation': 'gut_detail',
@@ -80,6 +82,15 @@ def fig_path(path):
     return path if os.path.isabs(path) else os.path.join(BASE, path)
 
 
+def apply_native_reference(library, slide, spec, *, automatic):
+    source = spec.get("source")
+    # Existing direct donor references use original page numbers on the local installation.
+    if (not automatic and library.root == PORTABLE_LIBRARY and PRIVATE_LIBRARY.is_dir()
+            and isinstance(source, str) and not source.startswith("catalog-")):
+        library = NativeLibrary(PRIVATE_LIBRARY)
+    return library.apply(slide, spec, fig_path)
+
+
 def native_page(prs, page, library, decision=None):
     """Use a reference page's native geometry without the default body frame."""
     if 'component' in page or page.get('figures'):
@@ -92,7 +103,7 @@ def native_page(prs, page, library, decision=None):
     for shape in list(slide.shapes):
         T.drop(shape)
     slide._element.set('showMasterSp', '0')
-    remap = library.apply(slide, spec, fig_path)
+    remap = apply_native_reference(library, slide, spec, automatic=decision is not None)
     if decision and decision.get("summary_box"):
         archetype = prs.slides[ARCHETYPES["bullets"]]
         summary = T.shape(archetype, "总结条")
@@ -156,7 +167,8 @@ def add_native_components(slide, page, library, canvas, manifest, record):
         region = spec.pop('box', None)
         order = spec.pop('audit', {})
         before = len(slide.shapes)
-        remap = library.apply(slide, spec, fig_path)
+        automatic = (record.get("selection") or {}).get("status") == "selected_component"
+        remap = apply_native_reference(library, slide, spec, automatic=automatic)
         native_records(slide, order, manifest, record, spec, remap, page.get('source'))
         if region is not None:
             position_native_selection(list(slide.shapes)[before:], region, canvas)

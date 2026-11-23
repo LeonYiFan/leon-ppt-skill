@@ -29,7 +29,7 @@ python -X utf8 scripts/build_report.py --plan assets/layout-options-example.json
 python -X utf8 scripts/build_layout_options.py --plan assets/layout-options-example.json --manifest ../../../output/draft.audit.json --output ../../../output/alternatives.pptx --preview-manifest ../../../output/alternatives.audit.json
 ```
 
-按计划格式填写自己的内容。随附的匿名蓝白组件包含 32 种整页布局和 25 种组件。开启 `prefer_native` 后，构建器根据内容选用适配的整页和组件。[计划格式](.agents/skills/leon-ppt-skill/references/page-plan.md) · [A/B/C 用法](.agents/skills/leon-ppt-skill/references/native-library-workflow.md#生成与确认备选)
+按计划格式填写自己的内容。随附 32 种可自动选用的整页布局、25 种组件和 908 个可查询的匿名版式。开启 `prefer_native` 后，构建器按内容匹配已配置的版式。需要进一步找图位、表格、卡片或流程时，可按图数、净尺寸和文字槽位搜索目录，再填入本次汇报内容。[计划格式](.agents/skills/leon-ppt-skill/references/page-plan.md) · [选版和查询](.agents/skills/leon-ppt-skill/references/native-library-workflow.md)
 
 下载者使用自己的论文和图片。原始 PPT、论文和全量素材库保存在作者本机。按原稿页码和对象 ID 编写的 `native` 或 `native_components` 计划依赖对应的完整本地库，可用 `--native-library` 连接。公开版计划可用 `native_profile` 指定随附的版式。
 

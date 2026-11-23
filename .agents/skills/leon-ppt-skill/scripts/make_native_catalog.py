@@ -1,4 +1,4 @@
-"""Build and search local PowerPoint slot maps."""
+"""Search editable PowerPoint layouts and build local slot catalogs."""
 
 from __future__ import annotations
 
@@ -12,7 +12,9 @@ import sqlite3
 from tempfile import NamedTemporaryFile
 
 
-ARCHIVE = Path(__file__).resolve().parent.parent / "assets" / "native-library"
+ASSETS = Path(__file__).resolve().parent.parent / "assets"
+ARCHIVE = ASSETS / "native-library"
+PORTABLE = ASSETS / "portable-library"
 CATALOG = "native-pages.jsonl"
 SOURCE_ORDER = {"gut": 0, "guide": 1, "kw16": 2, "kw16-9": 3}
 FILLABLE = {"text", "picture", "table"}
@@ -36,6 +38,56 @@ PAGE_FIELDS = (
 def iter_jsonl(path):
     with path.open(encoding="utf-8-sig") as stream:
         yield from (json.loads(line) for line in stream if line.strip())
+
+
+def source_rank(source):
+    return SOURCE_ORDER.get(source.removeprefix("catalog-"), len(SOURCE_ORDER))
+
+
+def catalog_rows(root, path, recipes):
+    """Read the indexed gallery and add records for its verified presets."""
+    portable = (root / "profiles").is_dir()
+    if not portable:
+        yield from iter_jsonl(path)
+        return
+    indexed = set()
+    if path.is_file() or path != root / CATALOG:
+        for row in iter_jsonl(path):
+            indexed.add((row["source"], row["page"]))
+            yield row
+
+    from native_reference import NativeLibrary
+
+    library = NativeLibrary(root)
+    for (source, page), entries in recipes.items():
+        if (source, page) in indexed:
+            continue
+        details = library.inspect(source, page)
+        shapes = [
+            {field: shape[field] for field in SLOT_FIELDS if field in shape}
+            for shape in details["shapes"]
+        ]
+        kinds = Counter(shape["type"] for shape in shapes)
+        intents = sorted({entry["intent"] for entry in entries})
+        yield {
+            "source": source,
+            "page": page,
+            "label": source,
+            "role": "可直接填充的已验收版式",
+            "priority": "主参考" if source_rank(source) < 2 else "补充参考",
+            "recipe": " ".join(entry["id"] for entry in entries),
+            "profile": intents,
+            "intents": intents,
+            "member": f"ppt/slides/slide{page}.xml",
+            "native_path": f"native/{source}.pptx",
+            "preview_path": None,
+            "hidden": False,
+            "canvas_emu": [details["width_emu"], details["height_emu"]],
+            "shape_types": dict(kinds),
+            "fillable_slots": sum(kinds[kind] for kind in FILLABLE),
+            "shapes": shapes,
+            "materials": [],
+        }
 
 
 def load_material_links(root):
@@ -131,13 +183,15 @@ def match_rank(row, terms):
         row["role"],
         row["priority"],
         recipe,
+        row.get("family", ""),
+        *row.get("intents", ()),
         *row["profile"],
         *(TYPE_LABELS.get(kind, kind) for kind in row["shape_types"]),
     )).casefold()
     if any(term not in text for term in terms):
         return None
     return (
-        SOURCE_ORDER.get(row["source"], len(SOURCE_ORDER)),
+        source_rank(row["source"]),
         row["hidden"],
         -sum(term in recipe for term in terms),
         row["page"],
@@ -147,7 +201,8 @@ def match_rank(row, terms):
 def search(root, input_path, *, source, page, query, limit, slots, assets):
     terms = query.casefold().split()
     matches = []
-    for row in iter_jsonl(input_path):
+    recipes = load_recipes(root) if (root / "profiles").is_dir() else {}
+    for row in catalog_rows(root, input_path, recipes):
         if source and row["source"] != source:
             continue
         if page is not None and row["page"] != page:
@@ -168,14 +223,18 @@ def search(root, input_path, *, source, page, query, limit, slots, assets):
             "shape_types": row["shape_types"],
             "fillable_slots": row["fillable_slots"],
             "native": str(root / row["native_path"]),
-            "preview": str(root / row["preview_path"]),
+            "preview": str(root / row["preview_path"]) if row.get("preview_path") else None,
             "slide_part": row["member"],
             "linked_materials": len(row["materials"]),
         }
+        for field in ("family", "intents"):
+            if field in row:
+                record[field] = row[field]
         if slots:
             record["shapes"] = row["shapes"]
             record["canvas_emu"] = row["canvas_emu"]
-            record["source_geometry_sha256"] = row["geometry_sha256"]
+            if "geometry_sha256" in row:
+                record["source_geometry_sha256"] = row["geometry_sha256"]
         if assets:
             record["materials"] = [
                 {**material, "file": str(root / material["file"])}
@@ -184,9 +243,7 @@ def search(root, input_path, *, source, page, query, limit, slots, assets):
         yield record
 
 
-def suggest(root, input_path, *, source=None, intent=None, figures=None, text_slots=0,
-            table=False, min_width=4.0, min_height=2.5, limit=10):
-    """List runnable recipes first, then structural candidates for manual review."""
+def load_recipes(root):
     from kw16_component_selection import load_component_profiles
     from native_distillation import load_profiles
 
@@ -196,28 +253,36 @@ def suggest(root, input_path, *, source=None, intent=None, figures=None, text_sl
         (False, load_component_profiles(root)),
     ):
         for row in profiles:
-            if intent is None or row["intent"] == intent:
-                slots = row.get("figures", [])
-                fields = {slot["field"] for slot in row.get("slots", {}).values() if "field" in slot}
-                fields.update(f"figures.{i}.caption" for i, slot in enumerate(slots) if slot.get("label"))
-                if row["intent"] == "comparison_table":
-                    fields.add("table.rows")
-                elif row["intent"] == "gantt_schedule":
-                    fields.update({"timeline.periods", "timeline.items[].title",
-                                   "timeline.items[].start", "timeline.items[].end"})
-                recipes[(row["source"], row["page"])].append({
-                    "id": row["id"], "intent": row["intent"], "kind": "page" if whole else "component",
-                    "figure_count": len(slots), "fields": sorted(fields),
-                })
+            slots = row.get("figures", [])
+            fields = {slot["field"] for slot in row.get("slots", {}).values() if "field" in slot}
+            fields.update(f"figures.{i}.caption" for i, slot in enumerate(slots) if slot.get("label"))
+            if row["intent"] == "comparison_table":
+                fields.add("table.rows")
+            elif row["intent"] == "gantt_schedule":
+                fields.update({"timeline.periods", "timeline.items[].title",
+                               "timeline.items[].start", "timeline.items[].end"})
+            recipes[(row["source"], row["page"])].append({
+                "id": row["id"], "intent": row["intent"], "kind": "page" if whole else "component",
+                "figure_count": len(slots), "fields": sorted(fields),
+            })
+    return recipes
+
+
+def suggest(root, input_path, *, source=None, intent=None, figures=None, text_slots=0,
+            table=False, min_width=4.0, min_height=2.5, limit=10):
+    """List runnable recipes first, then structural candidates for manual review."""
+    recipes = load_recipes(root)
 
     ranked = []
-    for row in iter_jsonl(input_path):
+    for row in catalog_rows(root, input_path, recipes):
         if row["hidden"] or source and source != row["source"]:
             continue
         src, page = row["source"], row["page"]
-        known = recipes[(src, page)]
-        if figures is not None:
-            known = [item for item in known if item["figure_count"] == figures]
+        known = [
+            item for item in recipes.get((src, page), ())
+            if (intent is None or item["intent"] == intent)
+            and (figures is None or item["figure_count"] == figures)
+        ]
         if source is None and row.get("layout_equivalent_to") and not known:
             continue
         image_boxes = [
@@ -234,24 +299,29 @@ def suggest(root, input_path, *, source=None, intent=None, figures=None, text_sl
         if (editable_text < text_slots or table and not tables or
                 figures is not None and available_figures < figures and not known):
             continue
-        if intent and not known and figures is None and not text_slots and not table:
+        intent_match = not intent or intent in row.get("intents", ())
+        if not intent_match and not known and figures is None and not text_slots and not table:
             continue
-        tier = 0 if known else 1
+        tier = 0 if known else 1 if intent_match else 2
         fit = abs(available_figures - figures) if figures is not None else 0
-        rank = (tier, src not in {"gut", "guide"}, fit, SOURCE_ORDER.get(src, len(SOURCE_ORDER)), page)
-        ranked.append((rank, {
+        rank = (tier, source_rank(src) >= 2, fit, source_rank(src), page)
+        record = {
             "source": src, "page": page,
             "status": "recipe" if known else "inspect",
             "recipes": known, "layout_tags": row["profile"], "text_slots": editable_text,
             "native_tables": tables, "candidate_image_boxes": image_boxes,
-            "preview": str(root / row["preview_path"]),
+            "preview": str(root / row["preview_path"]) if row.get("preview_path") else None,
             "native": str(root / row["native_path"]),
-        }))
+        }
+        for field in ("family", "intents"):
+            if field in row:
+                record[field] = row[field]
+        ranked.append((rank, record))
     ranked.sort(key=lambda item: item[0])
     seen = set()
     count = 0
     for _, row in ranked:
-        if row["source"] in {"kw16", "kw16-9"}:
+        if row["source"] in {"kw16", "kw16-9"} and row["preview"]:
             identity = Path(row["preview"]).stem
             if identity in seen and row["status"] != "recipe":
                 continue
@@ -267,7 +337,8 @@ def main():
     commands = parser.add_subparsers(dest="command", required=True)
     for command in ("build", "search", "suggest"):
         cli = commands.add_parser(command)
-        cli.add_argument("--archive", type=Path, default=ARCHIVE)
+        cli.add_argument("--archive", type=Path,
+                         help="指定目录。搜索默认用随附匿名素材库，重建索引默认用本地原稿库")
         if command == "build":
             cli.add_argument("--output", type=Path, help="default: archive/native-pages.jsonl")
         elif command == "search":
@@ -289,7 +360,8 @@ def main():
             cli.add_argument("--min-height", type=float, default=2.5, help="候选图位最低高度 cm")
             cli.add_argument("--limit", type=int, default=10)
     args = parser.parse_args()
-    root = args.archive.resolve()
+    default_root = PORTABLE if args.command != "build" and PORTABLE.is_dir() else ARCHIVE
+    root = (args.archive or default_root).resolve()
     try:
         if args.command == "build":
             result = build_catalog(root, args.output or root / CATALOG)

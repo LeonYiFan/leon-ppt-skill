@@ -39,6 +39,50 @@
     },
     {
       "id": "guide"
+    },
+    {
+      "id": "catalog-gut",
+      "pages": 33
+    },
+    {
+      "id": "catalog-guide",
+      "pages": 29
+    },
+    {
+      "id": "catalog-kw16",
+      "pages": 508
+    },
+    {
+      "id": "catalog-reference-01",
+      "pages": 39
+    },
+    {
+      "id": "catalog-reference-02",
+      "pages": 37
+    },
+    {
+      "id": "catalog-reference-03",
+      "pages": 14
+    },
+    {
+      "id": "catalog-reference-04",
+      "pages": 4
+    },
+    {
+      "id": "catalog-reference-05",
+      "pages": 32
+    },
+    {
+      "id": "catalog-reference-06",
+      "pages": 13
+    },
+    {
+      "id": "catalog-reference-07",
+      "pages": 1
+    },
+    {
+      "id": "catalog-process",
+      "pages": 198
     }
   ]
 }
